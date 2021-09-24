@@ -189,8 +189,8 @@
                     },
                     type: 'POST',
                     //Undo these changes for live website
-                    // url: '/getmail', //for localhost
-                    url:'/admissionForms/pg/index.php/getmail', //This is for live website
+                     url: '/getmail', //for localhost
+                    //url:'/admissionForms/pg/index.php/getmail', //This is for live website
                     data: {
                       email1: $("#email").val()
 

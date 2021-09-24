@@ -210,8 +210,8 @@
                   },
                   type: 'POST',
                   //Undo these changes for live website
-                // url: '/getotp', //This is for localhost
-                 url:'/admissionForms/pg/index.php/getotp',//This is for live website
+                 url: '/getotp', //This is for localhost
+                 //url:'/admissionForms/pg/index.php/getotp',//This is for live website
                   data: {
                     mobile: $("#mobile").val(),
                     _token: '{{csrf_token()}}'
