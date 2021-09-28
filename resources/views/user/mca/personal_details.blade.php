@@ -149,7 +149,7 @@ function myFunction() {
                   <td>Select <font style="font-weight: bold;">YES</font> if you have domicile. <br> Select <font style="font-weight: bold;">NO</font> if you have domicile application.</td>
                 </tr>
                 <tr>
-                  <td>UID ( Adhar NUmber )</td>
+                  <td>UID ( Aadhar NUmber )</td>
                   <td>Enter 12 digit adhar number in this field. It is compulsory.</td>
                   <td>123412341234</td>
                 </tr>
@@ -181,7 +181,7 @@ function myFunction() {
       </div>
       <div class="form-group col-md-12 col-sm-12">
         <label for="nameAsOnMarksheet">Name as on Marksheet<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-        <input type="text" class="form-control" id="nameAsOnMarksheet" name="nameAsOnMarksheet" value = "{{$user1[0]->name_on_marksheet}}" placeholder="Name as on Marksheet" required>
+        <input type="text" class="form-control" id="nameAsOnMarksheet" name="nameAsOnMarksheet" value = "{{$user1[0]->name_on_marksheet}}" placeholder="Name as on Marksheet" maxlength="45" required>
         
         <script type="text/javascript">
               document.getElementById("nameAsOnMarksheet").onkeypress=function(e)
@@ -230,7 +230,7 @@ function myFunction() {
       </div>
       <div class="form-group col-md-4 col-sm-12">
         <label for="placeOfBirthCity">City Of Birth<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-        <input type="text" class="form-control" id="placeOfBirthCity" name="placeOfBirthCity" value = "{{$user1[0]->place_of_birth_city}}" placeholder="Enter City" required>
+        <input type="text" class="form-control" id="placeOfBirthCity" name="placeOfBirthCity" value = "{{$user1[0]->place_of_birth_city}}" placeholder="Enter City" maxlength="45" required>
         
         <script type="text/javascript">
         document.getElementById("placeOfBirthCity").onkeypress=function(e)
@@ -243,7 +243,7 @@ function myFunction() {
       </div>
       <div class="form-group col-md-4 col-sm-12">
         <label for="placeOfBirthState">State Of Birth<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-        <input type="text" class="form-control" id="placeOfBirthState" name="placeOfBirthState" value="{{$user1[0]->place_of_birth_state}}" placeholder="Enter State" required>
+        <input type="text" class="form-control" id="placeOfBirthState" name="placeOfBirthState" value="{{$user1[0]->place_of_birth_state}}" placeholder="Enter State" maxlength="45" required>
         
         <script type="text/javascript">
         document.getElementById("placeOfBirthState").onkeypress=function(e)
@@ -257,7 +257,7 @@ function myFunction() {
       
       <div class="form-group col-md-4 col-sm-12">
         <label for="motherTongue">Mother Tongue<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-        <input type="text" class="form-control" id="motherTongue" name="motherTongue" value="{{$user1[0]->mother_tongue}}" placeholder="Mother Tongue" required>
+        <input type="text" class="form-control" id="motherTongue" name="motherTongue" value="{{$user1[0]->mother_tongue}}" placeholder="Mother Tongue" maxlength="15" required>
         
         <script type="text/javascript">
         document.getElementById("motherTongue").onkeypress=function(e)
@@ -270,7 +270,7 @@ function myFunction() {
       </div>
       <div class="form-group col-md-4 col-sm-12">
         <label for="nationality">Nationality<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-        <input type="text" class="form-control" id="nationality" name="nationality" value = "{{$user1[0]->nationality}}" placeholder="Nationality" required>
+        <input type="text" class="form-control" id="nationality" name="nationality" value = "{{$user1[0]->nationality}}" placeholder="Nationality" maxlength="10" required>
         
         <script type="text/javascript">
         document.getElementById("nationality").onkeypress=function(e)
@@ -283,7 +283,7 @@ function myFunction() {
       </div>
       <div class="form-group col-md-4 col-sm-12">
         <label for="religion">Religion<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-        <input type="text" class="form-control" id="religion" name="religion" value="{{$user1[0]->religion}}" placeholder="Religion" required>
+        <input type="text" class="form-control" id="religion" name="religion" value="{{$user1[0]->religion}}" placeholder="Religion" maxlength="10" required>
         
         <script type="text/javascript">
         document.getElementById("religion").onkeypress=function(e)
@@ -320,8 +320,8 @@ function myFunction() {
         </select>
       </div>
       <div class="form-group col-md-4 col-sm-12">
-        <label for="uid">UID ( Adhar Number )<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-        <input type="text" class="form-control" id="uid" name="uid" maxlength="12" value="{{$user1[0]->uid }}" oninput="check1()" placeholder="Enter 12 digit Adhar Number" required>
+        <label for="uid">UID ( Aadhar Number )<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
+        <input type="text" class="form-control" id="uid" name="uid" maxlength="12" value="{{$user1[0]->uid }}" oninput="check1()" placeholder="Enter 12 digit Aadhar Number" required>
         <script type="text/javascript">
            function check1() {
             var uid=document.getElementById('uid');
@@ -391,9 +391,17 @@ function myFunction() {
       <div id="stdDomicile">
         <div class="form-group col-md-6 col-sm-12">
           <label for="domicileNumber">Students Domicile No.<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="domicileNumber" name="domicileNumber" value = "{{$user1[0]->student_domicile_no}}" placeholder="Students Domicile No.">
+          <input type="text" class="form-control" id="domicileNumber" name="domicileNumber" value = "{{$user1[0]->student_domicile_no}}" placeholder="Students Domicile No." maxlength="20">
          
         </div>
+        <script type="text/javascript">
+          document.getElementById("domicileNumber").onkeypress=function(e)
+          { 
+          var e=window.event || e 
+          var keyunicode=e.charCode || e.keyCode 
+          return (keyunicode>=48 && keyunicode<=57 || keyunicode==8 || keyunicode==32)? true : false 
+        }
+        </script>
         <div class="form-group col-md-6 col-sm-12">
           <label for="domicileDate">Date of Students Domicile<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
           <input type="date" class="form-control" id="domicileDate" name="domicileDate" value = "{{$user1[0]->student_domicile_date}}" placeholder="Date of Students Domicile">
@@ -416,7 +424,52 @@ function myFunction() {
         </a>
       </div>
       <div class="form-group col-md-6 col-sm-12">
-        <button type="submit" class="btn btn-view btn-primary" id="submit" name="submit" style="width: 100%" >Save And Continue</button>
+        <button type="submit" class="btn btn-view btn-primary" id="submit" name="submit" style="width: 100%" onclick="checkDates()" >Save And Continue</button>
+        <script type=text/javascript>
+          function checkDates() {                            
+                            var dob = document.getElementById('dob').value;
+                            var today = (new Date()).toISOString().slice(0, 10);
+
+                            var yob = dob.substring(0,4);
+                            if (document.getElementById('dom_yes').checked) {
+                                var domDate = document.getElementById('domicileDate').value;
+                                if(domDate>=today){
+                                    alert("Domicile date cannot be in future");
+                                    document.getElementById('domicileDate').value = '';
+                                    document.getElementById('domicileDate').focus;
+                                    e.preventDefault();
+                                }
+                                var yodD = domDate.substring(0,4);
+                                if (dob != null && domDate != null) {
+                                    if(yodD <= yob) {
+                                        alert("Domicile date cannot be less than or equal to Date of Birth");
+                                        document.getElementById('domicileDate').value = '';
+                                        document.getElementById('domicileDate').focus;
+                                        e.preventDefault();
+                                    }
+                                }
+                            }
+                            if (document.getElementById('dom_no').checked) {
+                                var domDate = document.getElementById('applictionDate').value;
+                                if(domDate>=today){
+                                    alert("Domicile application date cannot be in future");
+                                    document.getElementById('applictionDate').value = '';
+                                    document.getElementById('applictionDate').focus;
+                                    e.preventDefault();
+                                }
+                                var yodD = domDate.substring(0,4);
+                                if (dob != null && domDate != null) {
+                                    if(yodD <= yob) {
+                                        alert("Domicile application date cannot be less than or equal to Date of Birth");
+                                        document.getElementById('applictionDate').value = '';
+                                        document.getElementById('applictionDate').focus;
+                                        e.preventDefault();
+                                    }
+                                }
+                            }
+                            
+                        }
+        </script>
         </a>
       </div>
     </form>
