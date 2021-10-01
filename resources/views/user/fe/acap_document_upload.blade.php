@@ -319,7 +319,7 @@ $(window).load(function() {
               <th rowspan="2">Sr No.</th>
               <th rowspan="2" style="text-align: center">Document Name <br> <font style="color: red">* are mandatory</font></th>
               <th colspan="2">Uploading</th>
-              <th rowspan="2">Not Applicable</th>
+              <!-- <th rowspan="2">Not Applicable</th> -->
               <th rowspan="2">Select Document</th>
               <th rowspan="2">Upload Document</th>
               <th rowspan="2">Status</th>
@@ -337,7 +337,7 @@ $(window).load(function() {
               {{-- Profile Photo --}}
               <tr>
                 <td>1</td>
-                <td>Profile Photo<font> *</font><p style="color: red"> (only .jpg) </p></td>
+                <td>Profile Photo<font> *</font></td>
                 @if( $user1[0]->photo == 'Yes')
                   <td>
                     <input type="radio" id="photo_yes" onchange="yesnoCheck1()" name="photo" value="yes" checked disabled>
@@ -345,9 +345,9 @@ $(window).load(function() {
                   <td>
                     <input type="radio" id="photo_no" onchange="yesnoCheck1()" name="photo" value="no" disabled>
                   </td>
-                  <td>
+                  <!-- <td>
                     <font style="font-size: 15px">Mandatory</font>
-                  </td>
+                  </td> -->
                 @else
                   <td>
                     <input type="radio" id="photo_yes" onchange="yesnoCheck1()" name="photo" value="yes" >
@@ -355,9 +355,9 @@ $(window).load(function() {
                   <td>
                     <input type="radio" id="photo_no" onchange="yesnoCheck1()" name="photo" value="no" checked>
                   </td>
-                  <td>
+                  <!-- <td>
                     <font style="font-size: 15px">Mandatory</font>
-                  </td>
+                  </td> -->
                 @endif
                 <td>
                   @if( $user1[0]->photo == 'Yes')
@@ -476,7 +476,7 @@ $(window).load(function() {
               {{-- Signature --}}
               <tr>
                 <td>2</td>
-                <td>Signature<font> *</font><p style="color: red"> (only .jpg) </p></td>
+                <td>Signature<font> *</font></td>
                 @if( $user1[0]->signature == 'Yes')
                   <td>
                     <input type="radio" id="signature_yes" onchange="yesnoCheck2()" name="signature" value="yes" checked disabled>
@@ -484,9 +484,9 @@ $(window).load(function() {
                   <td>
                     <input type="radio" id="signature_no" onchange="yesnoCheck2()" name="signature" value="no" disabled>
                   </td>
-                  <td>
+                  <!-- <td>
                     <font style="font-size: 15px">Mandatory</font>
-                  </td>
+                  </td> -->
                 @else
                   <td>
                     <input type="radio" id="signature_yes" onchange="yesnoCheck2()" name="signature" value="yes" >
@@ -494,9 +494,9 @@ $(window).load(function() {
                   <td>
                     <input type="radio" id="signature_no" onchange="yesnoCheck2()" name="signature" value="no" checked>
                   </td>
-                  <td>
+                  <!-- <td>
                     <font style="font-size: 15px">Mandatory</font>
-                  </td>
+                  </td> -->
                 @endif
                 <td>
                   @if( $user1[0]->signature == 'Yes')
@@ -611,10 +611,181 @@ $(window).load(function() {
                       }
                 </script>
               </tr>
+              {{-- PARENTS SIGNATURE  --}}
+              <tr>
+                <td>2b</td>
+                <td>Parent's/Guardian's Signature<font> *</font>
+                </td>
+                @if ($user1[0]->parent_signature == 'Yes')
+                    <td>
+                        <input type="radio" id="parent_signature_yes" onchange="yesnoCheck2a()" name="parent_signature" value="yes" checked disabled>
+                    </td>
+                    <td>
+                        <input type="radio" id="parent_signature_no" onchange="yesnoCheck2a()" name="parent_signature" value="no" disabled>
+                    </td>
+                @else
+                    <td>
+                        <input type="radio" id="parent_signature_yes" onchange="yesnoCheck2a()" name="parent_signature" value="yes">
+                    </td>
+                    <td>
+                        <input type="radio" id="parent_signature_no" onchange="yesnoCheck2a()" name="parent_signature" value="no" checked>
+                    </td>
+                @endif
+                <!-- <td><font style="font-size: 15px">Mandatory</font></td> -->
+                <td>
+                    @if ($user1[0]->parent_signature == 'Yes')
+                        {{-- <a href="{{ asset('public//public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->signature_path) }}" id="view_signature" target="_blank">View Document</a> --}}
+                        <!---------------------------View PDF Modal------------------------------->
+                        <div class="modal fade" id="showParentSignature" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Parent's/Guardian's Signature Photo</h4>
+                                        <button type="button" class="close"
+                                            data-dismiss="modal">&times;</button>
+
+                                    </div>
+                                    <div class="modal-body">
+                                        <center>
+                                            <!--  <img src="{{ asset('/public/uploads/' . $user1[0]->dte_id . '_' . $hash . '/' . $user1[0]->parent_signature_path) }}" width="500"> change  it while uploading in server -->
+                                            <img src="{{ asset('/uploads/' . $user1[0]->dte_id . '_' . $hash . '/' . $user1[0]->parent_signature_path) }}"
+                                                width="500">
+                                          <br>
+                                            <strong>{{$user1[0]->parent_signature_name}}</strong>
+                                        </center>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-------------------------------Close------------------------------------>
+
+                        <button type="button" data-toggle="modal" data-target="#showParentSignature"
+                            id="pdf_parent_signature_view" class="btn btn-view"
+                            style="width: 100%;">View</button>
+                        <input type="file" style="display: none;" id="parent_signature" name="parent_signature">
+                    @else
+                        <input type="file" style="display: block;" id="parent_signature" name="parent_signature">
+
+                    @endif
+                </td>
+                
+                <td>
+                    @if ($user1[0]->parent_signature == 'Yes')
+                        <button type="submit" style="display: none;" id="parent_signature_upload"
+                            class="btn btn-sm btn-success">Upload</button>
+                        <a href="{{ route('delete', 'parent_signature') }}"> <button type="button"
+                                style="display: block;" id="parent_signature_reupload"
+                                 class="btn btn-view" 
+                                onclick="parent_signatureReupload()">Reupload</button></a>
+                    @else
+                        {{-- HIDDEN TEXT FIELD FOR PARENT NAME --}}
+                        <input type="hidden" id="parent_signature_name" name="parent_signature_name">
+
+                        <button type="submit" style="display: block;" id="parent_signature_upload"
+                            class="btn btn-sm btn-success" onclick="return getParentSignatureName()">Upload</button>
+                        <button type="button" style="display: none;" id="parent_signature_reupload"
+                             class="btn btn-view" >Reupload</button>
+                    @endif
+                </td>
+              <script>
+                  function getParentSignatureName() {
+                      var parent_name = window.prompt('Enter full name of the parent/guardian whose signature is being uploaded')
+                      if(parent_name==null) {
+                          return false;
+                      }
+                      document.getElementById("parent_signature_name").value = parent_name;
+                      return true;
+                  }
+              </script>
+                <td>
+                    {{-- status check by this variable for js --}}
+                    @if ($user1[0]->parent_signature == 'Yes')
+                        <p>Uploaded</p>
+                    @else
+                        <p>Not Uploaded</p>
+                    @endif
+                </td>
+                <td>
+                    @if ($user1[0]->parent_signature == 'Yes')
+                        <a href="{{ route('delete', 'parent_signature') }}"><button type="button"
+                                style="display: block;" id="parent_signature_delete"
+                                class="btn btn-sm btn-danger"
+                                onclick="parent_signatureDelete()">Delete</button></a>
+                    @else
+                        <a href="{{ route('delete', 'parent_signature') }}"><button type="button"
+                                style="display: none;" id="parent_signature_delete"
+                                class="btn btn-sm btn-danger"
+                                onclick="parent_signatureDelete()">Delete</button></a>
+                    @endif
+                </td>
+                {{-- <td>
+                    @if (session('parent_signature_error'))
+                        <center>
+                            <p style="color: #ff0000;"> {{ session('parent_signature_error') }}!</p>
+                        </center>
+                    @endif
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                </td> --}}
+                <script type="text/javascript">
+                    function ync2a() {
+                        if (document.getElementById('parent_signature_no').checked) {
+                            document.getElementById('parent_signature').style.display = 'none';
+                            document.getElementById('parent_signature_upload').style.display = 'none';
+                        }
+                    }
+
+                    function yesnoCheck2a() {
+                        if (document.getElementById('parent_signature_yes').checked) {
+                            document.getElementById('parent_signature').style.display = 'block';
+                            document.getElementById('parent_signature_upload').style.display = 'block';
+                        }
+                        if (document.getElementById('parent_signature_no').checked) {
+                            document.getElementById('parent_signature').style.display = 'none';
+                            document.getElementById('parent_signature_upload').style.display = 'none';
+                        }
+                    }
+
+                    function parent_signatureReupload() {
+                        document.getElementById('parent_signature_yes').disabled = true;
+                        document.getElementById('parent_signature_no').disabled = true;
+                        document.getElementById('pdf_parent_signature_view').style.display = 'none';
+                        document.getElementById('parent_signature').style.display = 'block';
+                        document.getElementById('parent_signature_upload').style.display = 'block';
+                        document.getElementById('parent_signature_reupload').style.display = 'none';
+                    }
+
+                    function parent_signatureDelete() {
+                        document.getElementById('parent_signature_yes').disabled = false;
+                        document.getElementById('parent_signature_no').checked = true;
+                        document.getElementById('parent_signature_no').disabled = false;
+                        document.getElementById('parent_pdf_signature_view').style.display = 'none';
+                        document.getElementById('parent_signature').style.display = 'none';
+                        document.getElementById('parent_signature_reupload').style.display = 'none';
+                        document.getElementById('parent_signature_delete').style.display = 'none';
+                        document.getElementById('parent_signature_upload').style.display = 'none';
+                    }
+                </script>
+            </tr>
+
               {{-- FC Confirmation Reciept --}}
               <tr>
                 <td>3</td>
-                <td>eScrutiny Centre Confirmation Receipt-cum-Acknowledgement for Admission<font> *</font><p style="color: red"> (only .pdf) </p></td>
+                <td>Fc Confirmation Reciept<font> *</font></td>
                 @if( $user1[0]->fc_confirmation_receipt == 'Yes')
                   <td>
                     <input type="radio" id="fc_confirmation_receipt_yes" onchange="yesnoCheck3()" name="fc_confirmation_receipt" value="yes" checked disabled>
@@ -622,9 +793,9 @@ $(window).load(function() {
                   <td>
                     <input type="radio" id="fc_confirmation_receipt_no" onchange="yesnoCheck3()" name="fc_confirmation_receipt" value="no" disabled>
                   </td>
-                  <td>
+                  <!-- <td>
                     <font style="font-size: 15px">Mandatory</font>
-                  </td>
+                  </td> -->
                 @else
                   <td>
                     <input type="radio" id="fc_confirmation_receipt_yes" onchange="yesnoCheck3()" name="fc_confirmation_receipt" value="yes" >
@@ -632,9 +803,9 @@ $(window).load(function() {
                   <td>
                     <input type="radio" id="fc_confirmation_receipt_no" onchange="yesnoCheck3()" name="fc_confirmation_receipt" value="no" checked>
                   </td>
-                  <td>
+                  <!-- <td>
                     <font style="font-size: 15px">Mandatory</font>
-                  </td>
+                  </td> -->
                 @endif
                 <td>
                   @if( $user1[0]->fc_confirmation_receipt == 'Yes')
@@ -754,7 +925,7 @@ $(window).load(function() {
             @if($user1[0]->is_cet=='1')
             <tr>
               <td>6</td>
-              <td>CET Result<font> *</font><p style="color: red"> (only .pdf) </p></td>
+              <td>CET Result<font> *</font></td>
               @if( $user1[0]->cet_result == 'Yes')
                 <td>
                   <input type="radio" id="cet_result_yes" onchange="yesnoCheck6()" name="cet_result" value="yes" checked disabled>
@@ -762,9 +933,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="cet_result_no" onchange="yesnoCheck6()" name="cet_result" value="no" disabled>
                 </td>
-                <td>
+                <!-- <td>
                   <font style="font-size: 15px">Mandatory</font>
-                </td>
+                </td> -->
               @else
                 <td>
                   <input type="radio" id="cet_result_yes" onchange="yesnoCheck6()" name="cet_result" value="yes" >
@@ -772,9 +943,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="cet_result_no" onchange="yesnoCheck6()" name="cet_result" value="no" checked>
                 </td>
-                <td>
+                <!-- <td>
                   <font style="font-size: 15px">Mandatory</font>
-                </td>
+                </td> -->
               @endif
               <td>
                 @if( $user1[0]->cet_result == 'Yes')
@@ -896,7 +1067,7 @@ $(window).load(function() {
             @if($user1[0]->is_jee=='1')
             <tr>
               <td>7</td>
-              <td>JEE Result<font> *</font><p style="color: red"> (only .pdf) </p></td>
+              <td>JEE Result<font> *</font></td>
               @if( $user1[0]->jee_result == 'Yes')
                 <td>
                   <input type="radio" id="jee_result_yes" onchange="yesnoCheck35()" name="jee_result" value="yes" checked disabled>
@@ -904,9 +1075,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="jee_result_no" onchange="yesnoCheck35()" name="jee_result" value="no" disabled>
                 </td>
-                <td>
+                <!-- <td>
                   <font style="font-size: 15px">Mandatory</font>
-                </td>
+                </td> -->
               @else
                 <td>
                   <input type="radio" id="jee_result_yes" onchange="yesnoCheck35()" name="jee_result" value="yes" >
@@ -914,9 +1085,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="jee_result_no" onchange="yesnoCheck35()" name="jee_result" value="no" checked>
                 </td>
-                <td>
+                <!-- <td>
                   <font style="font-size: 15px">Mandatory</font>
-                </td>
+                </td> -->
               @endif
               <td>
                 @if( $user1[0]->jee_result == 'Yes')
@@ -1039,7 +1210,7 @@ $(window).load(function() {
             {{-- SSC Marksheet --}}
             <tr>
               <td>8</td>
-              <td>SSC Marksheet<font> *</font><p style="color: red"> (only .pdf) </p></td>
+              <td>SSC Marksheet<font> *</font></td>
               @if( $user1[0]->ssc_marksheet == 'Yes')
                 <td>
                   <input type="radio" id="ssc_marksheet_yes" onchange="yesnoCheck7()" name="ssc_marksheet" value="yes" checked disabled>
@@ -1047,9 +1218,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="ssc_marksheet_no" onchange="yesnoCheck7()" name="ssc_marksheet" value="no" disabled>
                 </td>
-                <td>
+                <!-- <td>
                   <font style="font-size: 15px">Mandatory</font>
-                </td>
+                </td> -->
               @else
                 <td>
                   <input type="radio" id="ssc_marksheet_yes" onchange="yesnoCheck7()" name="ssc_marksheet" value="yes" >
@@ -1057,9 +1228,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="ssc_marksheet_no" onchange="yesnoCheck7()" name="ssc_marksheet" value="no" checked>
                 </td>
-                <td>
+                <!-- <td>
                   <font style="font-size: 15px">Mandatory</font>
-                </td>
+                </td> -->
               @endif
               <td>
                 @if( $user1[0]->ssc_marksheet == 'Yes')
@@ -1179,7 +1350,7 @@ $(window).load(function() {
             {{-- HSC Marksheet --}}
             <tr>
               <td>9</td>
-              <td>HSC Marksheet<font> *</font><p style="color: red"> (only .pdf) </p></td>
+              <td>HSC Marksheet<font> *</font></td>
               @if( $user1[0]->hsc_marksheet == 'Yes')
                 <td>
                   <input type="radio" id="hsc_marksheet_yes" onchange="yesnoCheck8()" name="hsc_marksheet" value="yes" checked disabled>
@@ -1187,9 +1358,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="hsc_marksheet_no" onchange="yesnoCheck8()" name="hsc_marksheet" value="no" disabled>
                 </td>
-                <td>
+                <!-- <td>
                   <font style="font-size: 15px">Mandatory</font>
-                </td>
+                </td> -->
               @else
                 <td>
                   <input type="radio" id="hsc_marksheet_yes" onchange="yesnoCheck8()" name="hsc_marksheet" value="yes" >
@@ -1197,9 +1368,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="hsc_marksheet_no" onchange="yesnoCheck8()" name="hsc_marksheet" value="no" checked>
                 </td>
-                <td>
+                <!-- <td>
                   <font style="font-size: 15px">Mandatory</font>
-                </td>
+                </td> -->
               @endif
               <td>
                 @if( $user1[0]->hsc_marksheet == 'Yes')
@@ -1321,7 +1492,7 @@ $(window).load(function() {
             {{-- HSC Passing Certificate --}}
             <tr style="display:none">
               <td>11</td>
-              <td>HSC Passing Certificate<font> *</font><p style="color: red"> (only .pdf) </p></td>
+              <td>HSC Passing Certificate<font> *</font></td>
               @if( $user1[0]->hsc_passing_certi == 'Yes')
                 <td>
                   <input type="radio" id="convocation_passing_certi_yes" onchange="yesnoCheck14()" name="hsc_passing_certi" value="yes" checked disabled>
@@ -1461,7 +1632,7 @@ $(window).load(function() {
             {{-- Birth Certificate --}}
             <tr>
               <td>13</td>
-              <td>Birth Certificate<font> *</font><p style="color: red"> (only .pdf) </p></td>
+              <td>Birth Certificate<font> *</font></td>
               @if( $user1[0]->birth_certi == 'Yes')
                 <td>
                   <input type="radio" id="birth_certi_yes" onchange="yesnoCheck16()" name="birth_certi" value="yes" checked disabled>
@@ -1469,10 +1640,10 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="birth_certi_no" onchange="yesnoCheck16()" name="birth_certi" value="no" disabled>
                 </td>
-                <td>
+                <!-- <td>
                     <font style="font-size: 15px">Mandatory</font><br>
                     <font style="font-size: 11px">( If You do not have Domicile Certificate )</font>
-                </td>
+                </td> -->
               @else
                 <td>
                   <input type="radio" id="birth_certi_yes" onchange="yesnoCheck16()" name="birth_certi" value="yes" >
@@ -1480,10 +1651,10 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="birth_certi_no" onchange="yesnoCheck16()" name="birth_certi" value="no" checked>
                 </td>
-                <td>
+                <!-- <td>
                     <font style="font-size: 15px">Mandatory</font><br>
                     <font style="font-size: 11px">( If You do not have Domicile Certificate )</font>
-                </td>
+                </td> -->
               @endif
               <td>
                 @if( $user1[0]->birth_certi == 'Yes')
@@ -1604,7 +1775,7 @@ $(window).load(function() {
             <tr>
               <td>14</td>
               <td>
-                    Domicile Certificate<font> *&nbsp;</font><p style="color: red"> (only .pdf) </p><br>
+                    Domicile Certificate<font> *&nbsp;</font><br>
                     <font style="font-size: 11px">(Mandatory for Type B candidate)</font>
                 </td>
               @if( $user1[0]->domicile == 'Yes')
@@ -1614,10 +1785,10 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="domicile_no" onchange="yesnoCheck17()" name="domicile" value="no" disabled>
                 </td>
-                <td>
+                <!-- <td>
                     <font style="font-size: 15px">Mandatory</font><br>
                     <font style="font-size: 11px">( If You do not have Birth Certificate )</font>
-                  </td>
+                  </td> -->
               @else
                 <td>
                   <input type="radio" id="domicile_yes" onchange="yesnoCheck17()" name="domicile" value="yes" >
@@ -1625,10 +1796,10 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="domicile_no" onchange="yesnoCheck17()" name="domicile" value="no" checked>
                 </td>
-                <td>
+                <!-- <td>
                     <font style="font-size: 15px">Mandatory</font><br>
                     <font style="font-size: 11px">( If You do not have Birth Certificate )</font>
-                  </td>
+                  </td> -->
               @endif
               <td>
                 @if( $user1[0]->domicile == 'Yes')
@@ -1749,7 +1920,7 @@ $(window).load(function() {
             {{-- Proforma O --}}
             <tr>
               <td>16</td>
-              <td>Proforma O<p style="color: red"> (only .pdf) </p></td>
+              <td>Proforma O</td>
               @if( $user1[0]->proforma_o == 'Yes')
                 <td>
                   <input type="radio" id="proforma_o_yes" onchange="yesnoCheck18()" name="proforma_o" value="yes" checked disabled>
@@ -1757,9 +1928,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="proforma_o_no" onchange="yesnoCheck18()" name="proforma_o" value="no" disabled>
                 </td>
-                <td>
+                <!-- <td>
                   <input type="radio" id="proforma_o_na" onchange="yesnoCheck18()" name="proforma_o" value="na" disabled>
-                </td>
+                </td> -->
               @elseif( $user1[0]->proforma_o == 'No' )
                 <td>
                   <input type="radio" id="proforma_o_yes" onchange="yesnoCheck18()" name="proforma_o" value="yes">
@@ -1767,9 +1938,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="proforma_o_no" onchange="yesnoCheck18()" name="proforma_o" value="no" checked>
                 </td>
-                <td>
+                <!-- <td>
                   <input type="radio" id="proforma_o_na" onchange="yesnoCheck18()" name="proforma_o" value="na" >
-                </td>
+                </td> -->
               @else
                 <td>
                   <input type="radio" id="proforma_o_yes" onchange="yesnoCheck18()" name="proforma_o" value="yes">
@@ -1777,9 +1948,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="proforma_o_no" onchange="yesnoCheck18()" name="proforma_o" value="no">
                 </td>
-                <td>
+                <!-- <td>
                   <input type="radio" id="proforma_o_na" onchange="yesnoCheck18()" name="proforma_o" value="na" checked>
-                </td>
+                </td> -->
               @endif
               <td>
                 @if( $user1[0]->proforma_o == 'Yes')
@@ -1906,7 +2077,7 @@ $(window).load(function() {
             {{-- Minority Affidavit --}}
             <tr>
               <td>18</td>
-              <td>Minority Affidavit<p style="color: red"> (only .pdf) </p></td>
+              <td>Minority Affidavit</td>
               @if( $user1[0]->minority_affidavit == 'Yes')
                 <td>
                   <input type="radio" id="minority_affidavit_yes" onchange="yesnoCheck20()" name="minority_affidavit" value="yes" checked disabled>
@@ -1914,9 +2085,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="minority_affidavit_no" onchange="yesnoCheck20()" name="minority_affidavit" value="no" disabled>
                 </td>
-                <td>
+                <!-- <td>
                   <input type="radio" id="minority_affidavit_na" onchange="yesnoCheck20()" name="minority_affidavit" value="na" disabled>
-                </td>
+                </td> -->
               @elseif($user1[0]->minority_affidavit == 'No')
                 <td>
                   <input type="radio" id="minority_affidavit_yes" onchange="yesnoCheck20()" name="minority_affidavit" value="yes">
@@ -1924,9 +2095,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="minority_affidavit_no" onchange="yesnoCheck20()" name="minority_affidavit" value="no" checked>
                 </td>
-                <td>
+                <!-- <td>
                   <input type="radio" id="minority_affidavit_na" onchange="yesnoCheck20()" name="minority_affidavit" value="na" >
-                </td>
+                </td> -->
               @else
                 <td>
                   <input type="radio" id="minority_affidavit_yes" onchange="yesnoCheck20()" name="minority_affidavit" value="yes">
@@ -1934,9 +2105,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="minority_affidavit_no" onchange="yesnoCheck20()" name="minority_affidavit" value="no">
                 </td>
-                <td>
+                <!-- <td>
                   <input type="radio" id="minority_affidavit_na" onchange="yesnoCheck20()" name="minority_affidavit" value="na" checked>
-                </td>
+                </td> -->
               @endif
               <td>
                 @if( $user1[0]->minority_affidavit == 'Yes')
@@ -2062,7 +2233,7 @@ $(window).load(function() {
             {{-- Gap Certificate --}}
             <tr>
               <td>19</td>
-              <td>Gap Certificate<p style="color: red"> (only .pdf) </p></td>
+              <td>Gap Certificate</td>
               @if( $user1[0]->gap_certi == 'Yes')
                 <td>
                   <input type="radio" id="gap_certi_yes" onchange="yesnoCheck21()" name="gap_certi" value="yes" checked disabled>
@@ -2070,9 +2241,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="gap_certi_no" onchange="yesnoCheck21()" name="gap_certi" value="no" disabled>
                 </td>
-                <td>
+                <!-- <td>
                   <input type="radio" id="gap_certi_na" onchange="yesnoCheck21()" name="gap_certi" value="na" disabled>
-                </td>
+                </td> -->
               @elseif($user1[0]->gap_certi == 'No')
                 <td>
                   <input type="radio" id="gap_certi_yes" onchange="yesnoCheck21()" name="gap_certi" value="yes">
@@ -2080,9 +2251,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="gap_certi_no" onchange="yesnoCheck21()" name="gap_certi" value="no" checked>
                 </td>
-                <td>
+                <!-- <td>
                   <input type="radio" id="gap_certi_na" onchange="yesnoCheck21()" name="gap_certi" value="na" >
-                </td>
+                </td> -->
               @else
                 <td>
                   <input type="radio" id="gap_certi_yes" onchange="yesnoCheck21()" name="gap_certi" value="yes">
@@ -2090,9 +2261,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="gap_certi_no" onchange="yesnoCheck21()" name="gap_certi" value="no">
                 </td>
-                <td>
+                <!-- <td>
                   <input type="radio" id="gap_certi_na" onchange="yesnoCheck21()" name="gap_certi" value="na" checked>
-                </td>
+                </td> -->
               @endif
               <td>
                 @if( $user1[0]->gap_certi == 'Yes')
@@ -2218,7 +2389,7 @@ $(window).load(function() {
             {{-- Community Certificate --}}
             <tr>
               <td>20</td>
-              <td>Community Certificate<p style="color: red"> (only .pdf) </p></td>
+              <td>Community Certificate</td>
               @if( $user1[0]->community_certi == 'Yes')
                 <td>
                   <input type="radio" id="community_certi_yes" onchange="yesnoCheck22()" name="community_certi" value="yes" checked disabled>
@@ -2226,9 +2397,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="community_certi_no" onchange="yesnoCheck22()" name="community_certi" value="no" disabled>
                 </td>
-                <td>
+                <!-- <td>
                   <input type="radio" id="community_certi_na" onchange="yesnoCheck22()" name="community_certi" value="na" disabled>
-                </td>
+                </td> -->
               @elseif($user1[0]->community_certi == 'No')
                 <td>
                   <input type="radio" id="community_certi_yes" onchange="yesnoCheck22()" name="community_certi" value="yes">
@@ -2236,9 +2407,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="community_certi_no" onchange="yesnoCheck22()" name="community_certi" value="no" checked>
                 </td>
-                <td>
+                <!-- <td>
                   <input type="radio" id="community_certi_na" onchange="yesnoCheck22()" name="community_certi" value="na" >
-                </td>
+                </td> -->
               @else
                 <td>
                   <input type="radio" id="community_certi_yes" onchange="yesnoCheck22()" name="community_certi" value="yes">
@@ -2246,9 +2417,9 @@ $(window).load(function() {
                 <td>
                   <input type="radio" id="community_certi_no" onchange="yesnoCheck22()" name="community_certi" value="no">
                 </td>
-                <td>
+                <!-- <td>
                   <input type="radio" id="community_certi_na" onchange="yesnoCheck22()" name="community_certi" value="na" checked>
-                </td>
+                </td> -->
               @endif
               <td>
                 @if( $user1[0]->community_certi == 'Yes')
