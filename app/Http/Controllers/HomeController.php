@@ -324,109 +324,7 @@ class HomeController extends Controller
   {
     $key = '1862392036201268';
 
-<<<<<<< HEAD
-          if($course == 'MCA') {
-                  if($ACAP == null) { 
-                      $submerchantid = '322'; 
-                  }
-                  else { 
-                      $submerchantid = '311'; 
-                  }
-              }
-          if($ACAP==null)
-          {
-             $event_type = "DTE";
-             $optn = $course."DTE";
-             $amount = $request->input('amount');
-            //return $optn;
-          }
-          if($DTE==null)
-          {
-            $event_type = "ACAP";
-            $optn = $course."ACAP";
-             $amount = 1180;//ACAP FORM FEES
-            //return $optn;
-          }
-         //return $amount;
-         
-          
-          $data = false;
-          while(!$data)
-          {
-               $numbers = range(910000, 919999);
-               shuffle($numbers);  
-               $randno=array_slice($numbers, 0, 1);
-             
-              $user1 = DB::table('fees_transaction')->select('trans_id')->where('ref_no', $randno[0])->get();
-                
-             
-                        if($user1 == [])
-                        {
-                            $data = false;
-                          
-                        }
-                         else
-                          $data = true;
-              
-          }
-        
-       
-         $user1 = DB::table('student_login')->select('email')->where('dte_id', $dte_id)->get();
-         $email = $user1[0]->email;
-          $randNo=$randno[0];                                             
-          $fees_transaction = new fees_transaction;
-          $fees_transaction->ref_no= $randNo;
-          $fees_transaction->dte_id=$dte_id;
-          $fees_transaction->sub_merchant_id=$submerchantid;
-          $fees_transaction->course=$optn;
-          $fees_transaction->init_amt=$amount;
-          $fees_transaction->admission_type=$event_type;
-          $fees_transaction->save(); 
-          //return $fees_transaction;
-            //return $key;
-          $refNo = $randNo;
-
-          //$key = '1862392036201268';
-          $paymode = '9';
-          $returnurl = 'https://vesitadmissions.ves.ac.in/admissionForms/pg/index.php/pstatus';
-          
-                         
-        //  $returnurl = 'https://dexpertsystems.com/Router/responseEazyPay';
-          $newEncrypter = new \Illuminate\Encryption\Encrypter( $key,config('app.cipher'));
-            
-    $mandatory = $refNo.'|'.$submerchantid.'|'.$amount.'|'.$dte_id.'|'.$email.'|'.$optn;
-       
-      $encMandatory =(new static)->aes128Encrypt($mandatory,$key);
-    //   return $mandatory;
- 
-      //$encOptn = (new static)->aes128Encrypt($optn,$key);
-        
-      $encRef = (new static)->aes128Encrypt($refNo,$key);
-      $encSubmerchantid = (new static)->aes128Encrypt($submerchantid,$key);
-      $encAmount =(new static)->aes128Encrypt($amount,$key);
-      $encPaymode = (new static)->aes128Encrypt($paymode,$key);
-      $encReturn =(new static)->aes128Encrypt($returnurl,$key);
-     //return $encRef;
-return view('user.paymentGateway')->with('refNo',$refNo)->with('submerchantid',$submerchantid)->with('paymode',$paymode)->with('amount',$amount);
-//fe-dse 131198
-      //icid=183625
-               
-       $url = "https://eazypay.icicibank.com/EazyPG?merchantid=183625&mandatory fields=".$encMandatory."&optional fields=&returnurl=".$encReturn."&Reference No=".$encRef."&submerchantid=".$encSubmerchantid."&transaction amount=".$encAmount."&paymode=".$encPaymode;
-    //   $url = 'https://eazypay.icicibank.com/EazyPG?icid=183625&mandatory fields='.$encMandatory.'&optional fields=&returnurl='.$encReturn.'&Reference No='.$encRef.'&submerchantid='.$encSubmerchantid.'&transaction amount='.$encAmount.'&paymode='.$encPaymode;
-     // return $url;
-     //  return "hvdjh";
-     return redirect($url);
-                                                                                      
-        }   
-    }
-    
-    public static function showpayReceipt(Request $request)
-    {
-      return view('user.payReceipt');
-    }
-=======
     $newEncrypter = new \Illuminate\Encryption\Encrypter($key, config('app.cipher'));
->>>>>>> bad84aeab89ce080868ad8816fae9f9e53ad4bd3
 
     // $mandatory = $refNo.'|'.$submerchantid.'|'.$amount.'|'.$dte_id.'|'.$email;
     // $encMandatory = $newEncrypter->encrypt($mandatory);
@@ -552,10 +450,11 @@ return view('user.paymentGateway')->with('refNo',$refNo)->with('submerchantid',$
     }
   }
 
-  public static function showpayReceipt(Request $request)
-  {
-    return view('user.payReceipt');
-  }
+    
+     public static function showpayReceipt(Request $request)
+    {
+      return view('user.payReceipt');
+    }
 
 
   public static function showpayGateway(Request $request)
@@ -9651,13 +9550,11 @@ return view('user.paymentGateway')->with('refNo',$refNo)->with('submerchantid',$
       }
     } elseif ($id == 'ACAP') {
 
-<<<<<<< HEAD
                $pdf = PDF::loadView('user.fe.pdfview_acap_fe');
                 //return $users1;
                return view('user.fe.pdfview_acap_fe',$users1);
             return $pdf->stream('user.fe.pdfview_acap_fe.pdf');
                 
-=======
       $course = $request->session()->get('log_course');
       $dte_id = $request->session()->get('log_dte_id');
       if ($course == "MCA") {
@@ -9668,7 +9565,7 @@ return view('user.paymentGateway')->with('refNo',$refNo)->with('submerchantid',$
         $users1 = DB::table("me_students")->where('dte_id', $dte_id)->get();
         $users1 = json_decode(json_encode($users1));
       }
->>>>>>> bad84aeab89ce080868ad8816fae9f9e53ad4bd3
+// >>>>>>> bad84aeab89ce080868ad8816fae9f9e53ad4bd3
 
       if ($course == "FEG") {
         $users1 = DB::table("fe_students")->where('dte_id', $dte_id)->get();

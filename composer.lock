@@ -1802,7 +1802,6 @@
         },
         {
             "name": "ramsey/uuid",
-<<<<<<< Updated upstream
             "version": "3.9.5",
             "source": {
                 "type": "git",
@@ -1813,28 +1812,12 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/ramsey/uuid/zipball/e62af90c1cf1552167e69e68c4c96b6a07a919c7",
                 "reference": "e62af90c1cf1552167e69e68c4c96b6a07a919c7",
-=======
-            "version": "3.9.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ramsey/uuid.git",
-                "reference": "ffa80ab953edd85d5b6c004f96181a538aad35a3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/ffa80ab953edd85d5b6c004f96181a538aad35a3",
-                "reference": "ffa80ab953edd85d5b6c004f96181a538aad35a3",
->>>>>>> Stashed changes
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "paragonie/random_compat": "^1 | ^2 | ^9.99.99",
-<<<<<<< Updated upstream
                 "php": "^5.4 | ^7 | ~8.0.0 | ~8.1.0",
-=======
-                "php": "^5.4 | ^7.0 | ^8.0",
->>>>>>> Stashed changes
                 "symfony/polyfill-ctype": "^1.8"
             },
             "replace": {
@@ -1920,11 +1903,7 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< Updated upstream
             "time": "2021-09-24T18:27:08+00:00"
-=======
-            "time": "2021-09-25T23:07:42+00:00"
->>>>>>> Stashed changes
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -5186,13 +5165,9 @@
         "php": ">=5.6.4"
     },
     "platform-dev": [],
-<<<<<<< Updated upstream
 <<<<<<< HEAD
     "plugin-api-version": "2.1.0"
 =======
     "plugin-api-version": "2.0.0"
 >>>>>>> 7c98d8660616fa464ccbd0647acb0be89f4ea99a
-=======
-    "plugin-api-version": "2.0.0"
->>>>>>> Stashed changes
 }

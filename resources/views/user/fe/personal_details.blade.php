@@ -44,12 +44,12 @@ $(window).load(function() {
                 document.getElementById('domicileNumber').value = '';
                 document.getElementById('domicileDate').value = '';
             }
-            /*if (r == "na") {
+            if (r == "na") {
                 document.getElementById('applicationNumber').value = '';
                 document.getElementById('applictionDate').value = '';
                 document.getElementById('domicileNumber').value = '';
                 document.getElementById('domicileDate').value = '';
-            }*/
+            }
         
     yesnoCheck()
    }
@@ -104,13 +104,13 @@ function myFunction() {
                   <td>Surname Firstname Middlename</td>
                 </tr>
                 <tr>
-                  <td>Do you have Maharashtra Domicile?</td>
-                  <td>This document is a <font style="font-weight: bold;">PROOF OF BIRTH</font> <br> For TYPE (A,C,D,E) - should fill if you don't have birth certificate.</td>
+                  <td>Do you have domicile?</td>
+                  <td>This document is a <font style="font-weight: bold;">PROOF OF BIRTH</font> <br> For TYPE (A,C,D,E) - should fill if you dont have birth certificate.</td>
                   <td>Select <font style="font-weight: bold;">YES</font> if you have domicile. <br> Select <font style="font-weight: bold;">NO</font> if you have domicile application.</td>
                 </tr>
                 <tr>
-                  <td>UID ( Aadhar Number )</td>
-                  <td>Enter 12 digit aadhar number in this field. It is compulsory.</td>
+                  <td>UID ( Adhar NUmber )</td>
+                  <td>Enter 12 digit adhar number in this field. It is compulsory.</td>
                   <td>123412341234</td>
                 </tr>
               </tbody>
@@ -141,7 +141,7 @@ function myFunction() {
       </div>
       <div class="form-group col-md-12 col-sm-12">
         <label for="nameAsOnMarksheet">Name as on Marksheet<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-        <input type="text" onpaste="return false;" ondrop="return false;" class="form-control" id="nameAsOnMarksheet" name="nameAsOnMarksheet" value = "{{$user1[0]->name_on_marksheet}}" placeholder="Name as on Marksheet" required>
+        <input type="text" class="form-control" id="nameAsOnMarksheet" name="nameAsOnMarksheet" value = "{{$user1[0]->name_on_marksheet}}" placeholder="Name as on Marksheet" required>
         
         <script type="text/javascript">
               document.getElementById("nameAsOnMarksheet").onkeypress=function(e)
@@ -165,7 +165,7 @@ function myFunction() {
       </div>
       <div class="form-group col-md-4 col-sm-12">
         <label for="dob">Date Of Birth<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-        <input type="date" class="form-control" id="dob" name="dob" oninput="date_of_birth()" value = "{{$user1[0]->date_of_birth}}" placeholder="Date Of Birth"  required>
+        <input type="date" class="form-control" id="dob" name="dob"  value = "{{$user1[0]->date_of_birth}}" placeholder="Date Of Birth"  required>
         <script type="text/javascript">
           function date_of_birth() {
           var dob=document.getElementById('dob').value;
@@ -174,7 +174,7 @@ function myFunction() {
           if(selected_date.getTime() >today.getTime() ){
 
           // alert('Enter proper date');
-          //document.getElementById("dob").setCustomValidity("Please enter proper date");
+          document.getElementById("dob").setCustomValidity("Please enter proper date");
          
             }
 
@@ -256,16 +256,16 @@ function myFunction() {
             </div>
             <div class="form-group col-md-4 col-sm-12">
               <label for="casteTribe">Caste / Tribe<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-              <input type="text" class="form-control" id="casteTribe" name="casteTribe" value="{{$user1[0]->caste_tribe}}" required placeholder="Caste/tribe" required>
+              <input type="text" class="form-control" id="casteTribe" name="casteTribe" value="{{$user1[0]->caste_tribe}}" required placeholder="Caste/tribe" maxlength="15" required>
              
-              <script type="text/javascript">
-              document.getElementById("casteTribe").onkeypress=function(e)
-                              { 
-                              var e=window.event || e 
-                              var keyunicode=e.charCode || e.keyCode 
-                              return (keyunicode>=65 && keyunicode<=90 || keyunicode>=97 && keyunicode<=122 || keyunicode==8 || keyunicode==32)? true : false 
-                              }
-              </script>
+              <!--<script type="text/javascript">-->
+              <!--document.getElementById("casteTribe").onkeypress=function(e)-->
+              <!--                { -->
+              <!--                var e=window.event || e -->
+              <!--                var keyunicode=e.charCode || e.keyCode -->
+              <!--                return (keyunicode>=65 && keyunicode<=90 || keyunicode>=97 && keyunicode<=122 || keyunicode==8 || keyunicode==32)? true : false -->
+              <!--                }-->
+              <!--</script>-->
             </div>
       <div class="form-group col-md-4 col-sm-12">
         <label for="bloodGroup">Blood Group<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
@@ -280,7 +280,7 @@ function myFunction() {
         </select>
       </div>
       <div class="form-group col-md-4 col-sm-12">
-        <label for="uid">UID ( Aadhar Number )<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
+        <label for="uid">UID ( Adhar Number )<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
         <input type="text" class="form-control" id="uid" name="uid"  value="{{$user1[0]->uid }}"  maxlength="12" onkeypress="return event.charCode>=48 && event.charCode<=57" oninput="check1()" placeholder="Enter 12 digit Adhar Number" required>
          <script type="text/javascript">
            function check1() {
@@ -298,19 +298,19 @@ function myFunction() {
 
       {{-- radio button for dom or dom appl --}}
       <div class="form-group col-md-12 col-sm-12">
-        <label for="lastName" style="font-size: 18px;">Do you have Maharashtra Domicile?</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="lastName" style="font-size: 18px;">Do you have Domicile</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         @if($domicile == "true")
         <input type="radio"  id="dom_yes" name="dom" onchange="yesnoCheck()" value="yes" checked>&nbsp;Yes&nbsp;&nbsp;
-        <!-- <input type="radio"  id="dom_no" name="dom" onchange="yesnoCheck()" value="no">&nbsp;No&nbsp;&nbsp; -->
-        <input type="radio"  id="dom_na" name="dom" onchange="yesnoCheck()" value="na">&nbsp;No&nbsp;&nbsp;
+        <input type="radio"  id="dom_no" name="dom" onchange="yesnoCheck()" value="no">&nbsp;No&nbsp;&nbsp;
+        <input type="radio"  id="dom_na" name="dom" onchange="yesnoCheck()" value="na">&nbsp;N.A.&nbsp;&nbsp;
         @elseif($domicile == "false")
         <input type="radio"  id="dom_yes" name="dom" onchange="yesnoCheck()" value="yes">&nbsp;Yes&nbsp;&nbsp;
-        <!-- <input type="radio"  id="dom_no" name="dom" onchange="yesnoCheck()" value="no" checked>&nbsp;No&nbsp;&nbsp; -->
-        <input type="radio"  id="dom_na" name="dom" onchange="yesnoCheck()" value="na">&nbsp;No&nbsp;&nbsp;
+        <input type="radio"  id="dom_no" name="dom" onchange="yesnoCheck()" value="no" checked>&nbsp;No&nbsp;&nbsp;
+        <input type="radio"  id="dom_na" name="dom" onchange="yesnoCheck()" value="na">&nbsp;N.A.&nbsp;&nbsp;
         @else
         <input type="radio"  id="dom_yes" name="dom" onchange="yesnoCheck()" value="yes">&nbsp;Yes&nbsp;&nbsp;
-        <!-- <input type="radio"  id="dom_no" name="dom" onchange="yesnoCheck()" value="no">&nbsp;No&nbsp;&nbsp; -->
-        <input type="radio"  id="dom_na" name="dom" onchange="yesnoCheck()" value="na" checked>&nbsp;No&nbsp;&nbsp;
+        <input type="radio"  id="dom_no" name="dom" onchange="yesnoCheck()" value="no">&nbsp;No&nbsp;&nbsp;
+        <input type="radio"  id="dom_na" name="dom" onchange="yesnoCheck()" value="na" checked>&nbsp;N.A.&nbsp;&nbsp;
         @endif
       </div>
       <script type="text/javascript">
@@ -325,16 +325,16 @@ function myFunction() {
                 document.getElementById('applicationNumber').required = false;
                 document.getElementById('applictionDate').required = false;
             }
-            // if (document.getElementById('dom_no').checked) {
-            //     document.getElementById('stdDomicile').style.display = 'none';
-            //     document.getElementById('stdDomicileAppl').style.display = 'block';
-            //     // dom 
-            //     document.getElementById('domicileNumber').required = false;
-            //     document.getElementById('domicileDate').required = false;
-            //     // dom appl
-            //     document.getElementById('applicationNumber').required = true;
-            //     document.getElementById('applictionDate').required = true;
-            // }
+            if (document.getElementById('dom_no').checked) {
+                document.getElementById('stdDomicile').style.display = 'none';
+                document.getElementById('stdDomicileAppl').style.display = 'block';
+                // dom 
+                document.getElementById('domicileNumber').required = false;
+                document.getElementById('domicileDate').required = false;
+                // dom appl
+                document.getElementById('applicationNumber').required = true;
+                document.getElementById('applictionDate').required = true;
+            }
             if (document.getElementById('dom_na').checked) {
                 document.getElementById('stdDomicile').style.display = 'none';
                 document.getElementById('stdDomicileAppl').style.display = 'none';
@@ -350,24 +350,25 @@ function myFunction() {
       <div id="stdDomicile">
         <div class="form-group col-md-6 col-sm-12">
           <label for="domicileNumber">Students Domicile No.<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="domicileNumber" name="domicileNumber" value = "{{$user1[0]->student_domicile_no}}" onKeyUp="$(this).val($(this).val().replace(/[^\d]/ig, ''))" placeholder="Students Domicile No.">
+          <input type="text" class="form-control" id="domicileNumber" name="domicileNumber" value = "{{$user1[0]->student_domicile_no}}" placeholder="Students Domicile No.">
         </div>
         <div class="form-group col-md-6 col-sm-12">
           <label for="domicileDate">Date of Students Domicile<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
           <input type="date" class="form-control" id="domicileDate" name="domicileDate"  value = "{{$user1[0]->student_domicile_date}}" placeholder="Date of Students Domicile">
         </div>
       </div>
-      <!-- <div id="stdDomicileAppl" style="display: none;">
+      <div id="stdDomicileAppl" style="display: none;">
         <div class="form-group col-md-6 col-sm-12">
           <label for="applicationNumber">Students Domicile Application No.<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="applicationNumber" name="applicationNumber" value = "{{-- $user1[0]->student_domicile_appl_no --}}" placeholder="Students Domicile Application No.">
+          <input type="text" class="form-control" id="applicationNumber" name="applicationNumber" value = "{{$user1[0]->student_domicile_appl_no}}" placeholder="Students Domicile Application No.">
         </div>
         <div class="form-group col-md-6 col-sm-12">
           <label for="applictionDate">Date of Application of Students Domicile<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="date" class="form-control" id="applictionDate" name="applictionDate" value = "{{-- $user1[0]->student_domicile_appl_date --}}" placeholder="Date of Application of Students Domicile">
+          <input type="date" class="form-control" id="applictionDate" name="applictionDate" value = "{{$user1[0]->student_domicile_appl_date}}" placeholder="Date of Application of Students Domicile">
         </div>
-      </div> -->
+      </div>
       <div class="form-group col-md-6 col-sm-12">
+        <!-- {{ route('fe_academic_details') }} -->
         <a  href="{{ route('fe_academic_details') }}">
         <button type="button" class="btn btn-view btn-primary" id="submit"  name="submit" style="width: 100%" >Back</button>
         </a>

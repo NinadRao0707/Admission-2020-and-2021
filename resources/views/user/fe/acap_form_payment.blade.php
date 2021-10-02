@@ -14,11 +14,13 @@
                     Form Fees<input type="text" id="paymentAmount" name="paymentAmount" style="display: none;" disabled="">
                  </span>
               </label>
-              <input type="text" class="form-control  " value ="2360" disabled style="z-index: 0 !important; color: black; min-width: 100px;">
+              <input type="text" class="form-control  " value ="1180" disabled style="z-index: 0 !important; color: black; min-width: 100px;">
               <span class="input-group-addon btn-view" style="background-color:#204a84 ; margin-left: 10%; margin-right: 10%;">
                 <input type="submit"  id="payment" name="payment" style="width: 100%;" class="btn btn-mine btn-view" value="Pay Now">
               </span>
-           </div>
+           </div> 
+           
+           
          </div>
       </form>
    </div>

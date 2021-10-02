@@ -1034,7 +1034,7 @@
       <!-------------------------------------------Page 1-------------------------------------------------->
       <div class="container">
          <div class="col-md-12">
-            <center><img class="img-responsive" src="{{ asset('images/header_fe_admissionForm.jpg') }}"></center>
+            <center><img class="img-responsive" src="{{ asset('public/images/Header-2020-21.jpg') }}"></center>
          </div>
          <div class="col-md-12">
             <div class="form-group">
@@ -1343,9 +1343,8 @@
                         <tr>
                            <td id="data" style="text-align: right; font-weight: bold;">Date&nbsp;&nbsp;&nbsp;</td>
                            <td id="data" colspan="3" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;{{  $users1['date'] }}</td>
-                           <td id="data" align="center" style="width: 40%" rowspan="3" colspan="3"> 
-                           <img src="{{ asset('/public/uploads/'.$users1[0]->dte_id.'_'.$users1['hash'].'/'.$users1[0]->signature_path) }}" style="height: 100px;" alt="Missing Image">        
-                              <p style=" margin-bottom:0px; text-align: center;">Candidate's Signature<br><b>({{ $users1[0]->name_on_marksheet }})</b></p>
+                           <td id="data" rowspan="3" colspan="3">
+                              <p style=" margin-bottom:-25px; text-align: center;">Candidate's Signature<br><b>({{ $users1[0]->name_on_marksheet }})</b></p>
                            </td>
                         </tr>
                         <tr>
@@ -1360,20 +1359,20 @@
                   </table>
                   <!------------------------------------------declaration------------------------------------------->
                   <div class="col-md-12" style="page-break-before:always;">
-                     <center><img class="img-responsive" src="{{ asset('images/header_fe_admissionForm.jpg') }}"></center>
+                     <center><img class="img-responsive" src="{{ asset('public/images/header_fe_admissionForm.jpg') }}"></center>
                   </div>
-                  <table>
+                  <table style="margin-top:5px;">
                      <thead>
-                        <tr>
-                           <th id="line" colspan="6" style="text-align: center; font-size: 25px;">DECLARATION BY STUDENT</th>
+                        <tr class="col-md-12">
+                           <th id="brand" colspan="12">Declaration by Student</th>
                         </tr>
                         <tr>
-                           <td id="line" colspan="6">
-                              <p>
+                           <td id="line" colspan="12">
+                              <p align="justify">
                                  <b>
                                  I have read all the rules of admission and on understanding these rules with respect to D.T.E. & University of Mumbai. 
                                  I have filled the Admission Form for First Year of Four Years Bachelor Degree Course in Engineering
-                                 for the Academic Year 2019-20. The information given by me in this application is true to the best of my knowledge & belief. 
+                                 for the Academic Year 2020-21. The information given by me in this application is true to the best of my knowledge & belief. 
                                  If at later stage, it is found that I have furnished wrong information and/or submitted false document(s), I am aware that my 
                                  admission stands cancelled and fees paid by me will be forfeited. Further I will be subject to legal and/or penal action as per the 
                                  provisions of the law.
@@ -1383,19 +1382,18 @@
                         </tr>
                         <tr>
                            <td id="data" style="text-align: right; font-weight: bold;">Date&nbsp;&nbsp;&nbsp;</td>
-                           <td id="data" colspan="3" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;{{  $users1['date'] }}</td>
-                           <td id="data" rowspan="3" colspan="4" style="text-align: center;">
-                           <img src="{{ asset('/public/uploads/'.$users1[0]->dte_id.'_'.$users1['hash'].'/'.$users1[0]->signature_path) }}" style="height: 100px;" alt="Missing Image">
-                              <p style=" text-align: center;">Candidate's Signature<br><b>({{ $users1[0]->name_on_marksheet }})</b></p>
+                           <td id="data" colspan="6" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;{{  $users1['date'] }}</td>
+                           <td id="data" rowspan="3" colspan="6">
+                              <p style=" margin-bottom:-25px; text-align: center;">Candidate's Signature<br><b>({{ $users1[0]->name_on_marksheet }})</b></p>
                            </td>
                         </tr>
                         <tr>
                            <td id="data" style="text-align: right;font-weight: bold;">Place&nbsp;&nbsp;&nbsp;</td>
-                           <td id="data" style="font-weight: bold;" colspan="3">&nbsp;&nbsp;&nbsp;Mumbai</td>
+                           <td id="data" style="font-weight: bold;" colspan="6">&nbsp;&nbsp;&nbsp;Mumbai</td>
                         </tr>
                         <tr>
                            <td id="data" style="text-align: right;font-weight: bold;">Verified By&nbsp;&nbsp;&nbsp;</td>
-                           <td id="data" colspan="3" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Name of Staff:<br><br>&nbsp;&nbsp;&nbsp;Signature:</td>
+                           <td id="data" colspan="6" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Name of Staff:<br><br>&nbsp;&nbsp;&nbsp;Signature:</td>
                         </tr>
                         <tr class="col-md-12">
                            <th id="brand" colspan="12">Remarks By Faculty</th>
@@ -1406,68 +1404,9 @@
                         </tr>
                      </thead>
                   </table>
-                  <!------------------------------------------- undertaking -------------------------------------------------->
+                  <!-------------------------------------------Page 2-------------------------------------------------->
                   <div class="col-md-12" style="page-break-before:always;">
-                     <center><img class="img-responsive" src="{{ asset('images/header_fe_admissionForm.jpg') }}"></center>
-                  </div>
-                  <table>
-                     <thead>
-                        <tr>
-                           <th id="line" style="text-align: center; font-size: 25px;" colspan="6">UNDERTAKING FOR ALL (EBC/ OBC/ SBC/ VJ/ NT/ SC & ST) CATEGORY STUDENTS</th>
-                        </tr>
-                        <tr>
-                           <td id="line" colspan="6">
-                              <p>
-                                 I, Mr. / Mrs. 
-                                 <b>
-                                    {{ $users1[0]->parent_signature_name }}
-                                 </b> hereby solemnly affirm that, my ward Mr. / Ms. 
-                                 <b>
-                                    {{ $users1[0]->name_on_marksheet }}
-                                 </b> has taken admission to the 
-                                 <b> 
-                                    FIRST YEAR
-                                 </b> of 
-                                 <b>
-                                    ENGINEERING DEGREE
-                                 </b> course in <b> {{ $users1[0]->dte_branch }} </b> for the Academic Year <b>2021-22</b>
-                                 in V.E.S. Institute of Technology, Chembur – 400074. <br>
-                                 <br>
-                                 We are aware of the fees structure email sent to all students from vesit.accounts@ves.ac.in. <br>
-                                 <br>
-                                 We further know that the balance fees payable by my ward towards Tuition Fees / Development Fees will be reimbursed 
-                                 by Government to college after successful submission of Scholarship form <b>by my ward</b>. <br>
-                                 <br>
-                                 I undertake that my ward will be solely responsible to fill the Scholarship form for respective Caste / Category and 
-                                 submit the form with required documents within the prescribed time as per the notification of Institute / Government 
-                                 and if in case he / she fails to submit the application form with all required documents or if the government does not 
-                                 approve the course / sanction the Freeship / Scholarship form because of non-submission of documents / any of the document 
-                                 or certificate is found to be a invalid or fraudulent and / or does not meet the eligibility norms / or fails to apply 
-                                 for Scholarship within the prescribed time, then I will be responsible and liable to pay the remaining / Tuition fees / Development fees.</p>
-                           </td>
-                        </tr>
-                        
-                        <tr>
-                           <td id="data" style="text-align: right;font-weight: bold;">Date&nbsp;&nbsp;&nbsp;</td>
-                           <td id="data" colspan="3" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;{{  $users1['date'] }}</td>
-                           <td id="data" rowspan="2" colspan="1" style="text-align: center">
-                              <img src="{{ asset('/public/uploads/'.$users1[0]->dte_id.'_'.$users1['hash'].'/'.$users1[0]->signature_path) }}" style="height: 100px;" alt="Missing Image">
-                              <p style=" text-align: center;">Candidate's Signature<br><b>({{ $users1[0]->name_on_marksheet }})</b></p>
-                           </td>
-                           <td id="data" rowspan="2" colspan="1" style="text-align: center">
-                              <img src="{{ asset('/public/uploads/'.$users1[0]->dte_id.'_'.$users1['hash'].'/'.$users1[0]->parent_signature_path) }}" style="height: 100px;" alt="Missing Image">
-                              <p style=" text-align: center;">Parent's Signature<br><b>({{ $users1[0]->parent_signature_name }})</b></p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td id="data" style="text-align: right;font-weight: bold;">Place&nbsp;&nbsp;&nbsp;</td>
-                           <td id="data" style="font-weight: bold;" colspan="3">&nbsp;&nbsp;&nbsp;Mumbai</td>
-                        </tr>
-                     </thead>
-                  </table>
-                  <!-------------------------------------------Page 3-------------------------------------------------->
-                  <div class="col-md-12" style="page-break-before:always;">
-                     <center><img class="img-responsive" src="{{ asset('images/header_fe_admissionForm.jpg') }}"></center>
+                     <center><img class="img-responsive" src="{{ asset('public/images/header_fe_admissionForm.jpg') }}"></center>
                   </div>
                   <table style="margin-top:-9px;">
                      <thead>
@@ -1515,8 +1454,8 @@
                            <td id="data" style="text-align: right;font-weight: bold;">Date&nbsp;&nbsp;&nbsp;</td>
                            <td id="data" colspan="3" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;{{  $users1['date'] }}</td>
                            <td id="data" rowspan="2" colspan="4" style="text-align: center;">
-                              <img src="{{ asset('/public/uploads/'.$users1[0]->dte_id.'_'.$users1['hash'].'/'.$users1[0]->signature_path) }}" style="height: 100px;" alt="Missing Image">
-                              <p style=" text-align: center;">Candidate's Signature<br><b>({{ $users1[0]->name_on_marksheet }})</b></p>
+                              <br><br><br><br>
+                              <center>Candidate's Signature<br><b>({{ $users1[0]->name_on_marksheet }})</b></center>
                            </td>
                         </tr>
                         <tr>
@@ -1525,10 +1464,10 @@
                         </tr>
                      </thead>
                   </table>
-                  <!-------------------------------------------Page 4-------------------------------------------------->
+                  <!-------------------------------------------Page 3-------------------------------------------------->
                   <div style="page-break-before: always;"></div>
                   <div class="col-md-12">
-                     <center><img class="img-responsive" src="{{ asset('images/header_fe_admissionForm.jpg') }}"></center>
+                     <center><img class="img-responsive" src="{{ asset('public/images/header_fe_admissionForm.jpg') }}"></center>
                   </div>
                   <table>
                      <thead>
@@ -1542,133 +1481,133 @@
                         </tr>
                         <tr>
                            <td id="line" colspan="6">
-                              <p>I Mr./Miss. <b>{{ $users1[0]->name_on_marksheet }}</b> hereby declare that I am taking admission to the Bachelors of Engineering Course <b>{{ $users1['shift_allotted'] }}</b> branch for the Academic Year: <span><b>2019-20</b></span> in V.E.S Institute of Technology, Chembur-74.</p>
-                              <p>I am submitting the following Original Documents at the time of the above said Admission:</p>
+                              <p>I Mr./Miss. <b>{{ $users1[0]->name_on_marksheet }}</b> hereby declare that I am taking admission to the Bachelors of Engineering Course <b>{{ $users1['shift_allotted'] }}</b> branch for the Academic Year: <span><b>2020-21</b></span> in V.E.S Institute of Technology, Chembur-74.</p>
+                              <p>I am not submitting the following Original Documents at the time of the above said Admission:</p>
                            </td>
                         </tr>
-                        @if( $users1[0]->photo == 'Yes')
+                        @if( $users1[0]->photo == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display: inline;" max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Profile Photo</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display: inline;" max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Profile Photo</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->signature == 'Yes')
+                        @if( $users1[0]->signature == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display: inline;" max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Signature</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display: inline;" max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Signature</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->fc_confirmation_receipt == 'Yes')
+                        @if( $users1[0]->fc_confirmation_receipt == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style=" display:inline; height:10px;" max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;FC Confirmation Receipt</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style=" display:inline; height:10px;" max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;eScutiny Centre Confirmation</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->dte_allotment_letter == 'Yes')
+                        @if( $users1[0]->dte_allotment_letter == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display: inline;" max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;DTE Allotment Letter</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display: inline;" max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;DTE Allotment Letter</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->arc_ackw_receipt == 'Yes')
+                        <!--@if( $users1[0]->arc_ackw_receipt == 'No')-->
+                        <!--<tr>-->
+                        <!--   <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;ARC Acknowledgement</td>-->
+                        <!--</tr>-->
+                        <!--@endif-->
+                        @if( $users1[0]->cet_result == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;ARC Acknowledgement</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"  style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;CET Result</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->cet_result == 'Yes')
+                        @if( $users1[0]->ssc_marksheet == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"  style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;CET Result</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;SSC Marksheet</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->ssc_marksheet == 'Yes')
+                        <!--@if( $users1[0]->hsc_passing_certi == 'No')-->
+                        <!--<tr>-->
+                        <!--   <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Convocation/Passing Certificate</td>-->
+                        <!--</tr>-->
+                        <!--@endif-->
+                        @if( $users1[0]->migration_certi == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;SSC Marksheet</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Migration Certificate</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->hsc_passing_certi == 'Yes')
+                        @if( $users1[0]->birth_certi == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Convocation/Passing Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Birth Certificate</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->migration_certi == 'Yes')
+                        @if( $users1[0]->domicile == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Migration Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Domicile Certificate</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->birth_certi == 'Yes')
+                        @if( $users1[0]->proforma_o == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Birth Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Proforma O</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->domicile == 'Yes')
+                        @if( $users1[0]->retention == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Domicile Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Retention Certificate</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->proforma_o == 'Yes')
+                        @if( $users1[0]->minority_affidavit == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma O</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Minority Affidavit</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->retention == 'Yes')
+                        @if( $users1[0]->gap_certi == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Retention Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Gap Certificate</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->minority_affidavit == 'Yes')
+                        @if( $users1[0]->community_certi == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Minority Affidavit</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Community Certificate</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->gap_certi == 'Yes')
+                        @if( $users1[0]->caste_certi == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Gap Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Caste Certificate</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->community_certi == 'Yes')
+                        @if( $users1[0]->caste_validity_certi == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Community Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"  style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Caste Validity Certificate</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->caste_certi == 'Yes')
-                        <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Caste Certificate</td>
-                        </tr>
-                        @endif
-                        @if( $users1[0]->caste_validity_certi == 'Yes')
-                        <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"  style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Caste Validity Certificate</td>
-                        </tr>
-                        @endif
-                        @if( $users1[0]->non_creamy_layer_certi == 'Yes')
+                        @if( $users1[0]->non_creamy_layer_certi == 'No')
                         <tr> style="height:10px; display:inline; " max-width="100%" 
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Non-Creamy Layer Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Non-Creamy Layer Certificate</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->proforma_a_b1_b2 == 'Yes')
+                        @if( $users1[0]->proforma_a_b1_b2 == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma A B1 B2</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Proforma A B1 B2</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->income_certi == 'Yes')
+                        @if( $users1[0]->income_certi == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"  style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Income Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"  style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Income Certificate</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->proforma_c_d_e == 'Yes')
+                        @if( $users1[0]->proforma_c_d_e == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"  style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma C D E</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"  style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Proforma C D E</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->proforma_j_k_l == 'Yes')
+                        @if( $users1[0]->proforma_j_k_l == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"  style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma J K L</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"  style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Proforma J K L</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->medical_certi == 'Yes')
+                        @if( $users1[0]->medical_certi == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"  style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Physical Fitness Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"  style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Physical Fitness Certificate</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->anti_ragging_affidavit == 'Yes')
+                        @if( $users1[0]->anti_ragging_affidavit == 'No')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"  style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Anti Ragging Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"  style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-remove.png') }}">&nbsp;&nbsp;&nbsp;Anti Ragging Certificate</td>
                         </tr>
                         @endif
                         <tr>
@@ -1693,8 +1632,8 @@
                            <td id="data" style="text-align: right;font-weight: bold;">Date&nbsp;&nbsp;&nbsp;</td>
                            <td id="data" colspan="3" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;{{  $users1['date'] }}</td>
                            <td id="data" rowspan="2" colspan="4" style="text-align: center;">
-                              <img src="{{ asset('/public/uploads/'.$users1[0]->dte_id.'_'.$users1['hash'].'/'.$users1[0]->signature_path) }}" style="height: 100px;" alt="Missing Image">
-                              <p style=" text-align: center;">Candidate's Signature<br><b>({{ $users1[0]->name_on_marksheet }})</b></p>
+                              <br><br><br><br>
+                              <center>Candidate's Signature<br><b>({{ $users1[0]->name_on_marksheet }})</b></center>
                            </td>
                         </tr>
                         <tr>
@@ -1703,10 +1642,10 @@
                         </tr>
                      </thead>
                   </table>
-                  <!-------------------------------------------Page 5-------------------------------------------------->
+                  <!-------------------------------------------Page 4-------------------------------------------------->
                   <div style="page-break-before: always;"></div>
                   <div class="col-md-12">
-                     <center><img class="img-responsive" src="{{ asset('images/header_fe_admissionForm.jpg') }}"></center>
+                     <center><img class="img-responsive" src="{{ asset('public/images/header_fe_admissionForm.jpg') }}"></center>
                   </div>
                   <table>
                      <thead>
@@ -1720,7 +1659,7 @@
                            <td id="line" colspan="6">
                               <p align="justify">
                                  I Mr./Miss. <b>{{ $users1[0]->name_on_marksheet }}</b> hereby declare that I am taking admission to the First Year of Engineering.
-                                 In <b>{{ $users1['shift_allotted'] }}</b> Shift for the Academic Year: 2019-20 in V.E.S Institute of Technology,
+                                 In <b>{{ $users1['shift_allotted'] }}</b> Shift for the Academic Year: 2020-21 in V.E.S Institute of Technology,
                                  Chembur-74.
                               </p>
                               <p>The following original certificates of the student have been retained with the institue for the admission purpose.</p>
@@ -1728,122 +1667,122 @@
                         </tr>
                         @if( $users1[0]->fc_confirmation_receipt == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;FC Confirmation Receipt</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;eScutiny Centre Confirmation</td>
                         </tr>
                         @endif
                         @if( $users1[0]->dte_allotment_letter == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;DTE Allotment Letter</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;DTE Allotment Letter</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->arc_ackw_receipt == 'Yes')
-                        <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;ARC Acknowledgement</td>
-                        </tr>
-                        @endif
+                        <!--@if( $users1[0]->arc_ackw_receipt == 'Yes')-->
+                        <!--<tr>-->
+                        <!--   <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;ARC Acknowledgement</td>-->
+                        <!--</tr>-->
+                        <!--@endif-->
                         @if( $users1[0]->cet_result == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;CET Result</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;CET Result</td>
                         </tr>
                         @endif
                         @if( $users1[0]->ssc_marksheet == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;SSC Marksheet</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;SSC Marksheet</td>
                         </tr>
                         @endif
                         @if( $users1[0]->hsc_marksheet == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;HSC / Diploma Marksheet</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;HSC / Diploma Marksheet</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->hsc_passing_certi == 'Yes')
-                        <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Convocation/Passing Certificate</td>
-                        </tr>
-                        @endif
+                        <!--@if( $users1[0]->hsc_passing_certi == 'Yes')-->
+                        <!--<tr>-->
+                        <!--   <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Convocation/Passing Certificate</td>-->
+                        <!--</tr>-->
+                        <!--@endif-->
                         @if( $users1[0]->migration_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Migration Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Migration Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->birth_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Birth Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%"  src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Birth Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->domicile == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Domicile Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%"  src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Domicile Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->proforma_o == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma O</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma O</td>
                         </tr>
                         @endif
                         @if( $users1[0]->retention == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%"  src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Retention Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%"  src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Retention Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->minority_affidavit == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Minority Affidavit</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Minority Affidavit</td>
                         </tr>
                         @endif
                         @if( $users1[0]->gap_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Gap Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Gap Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->community_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Community Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Community Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->caste_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Caste Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Caste Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->caste_validity_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Caste Validity Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Caste Validity Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->non_creamy_layer_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Non-Creamy Layer Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Non-Creamy Layer Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->proforma_a_b1_b2 == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma A B1 B2</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma A B1 B2</td>
                         </tr>
                         @endif
                         @if( $users1[0]->income_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Income Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Income Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->proforma_c_d_e == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma C D E</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma C D E</td>
                         </tr>
                         @endif
                         @if( $users1[0]->proforma_j_k_l == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma J K L</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma J K L</td>
                         </tr>
                         @endif
                         @if( $users1[0]->medical_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Physical Fitness Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Physical Fitness Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->anti_ragging_affidavit == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Anti Ragging Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold; font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Anti Ragging Certificate</td>
                         </tr>
                         @endif
                         <tr>
@@ -1855,8 +1794,8 @@
                            <td id="data" style="text-align: right;">Date&nbsp;&nbsp;&nbsp;</td>
                            <td id="data" colspan="3" style="font-weight: bold;">&nbsp;&nbsp;&nbsp;{{  $users1['date'] }}</td>
                            <td id="data" rowspan="2" colspan="4" style="text-align: center;">
-                              <img src="{{ asset('/public/uploads/'.$users1[0]->dte_id.'_'.$users1['hash'].'/'.$users1[0]->signature_path) }}" style="height: 100px;" alt="Missing Image">
-                              <p style=" text-align: center;">Candidate's Signature<br><b>({{ $users1[0]->name_on_marksheet }})</b></p>
+                              <br><br><br><br>
+                              <center>Candidate's Signature<br><b>({{ $users1[0]->name_on_marksheet }})</b></center>
                            </td>
                         </tr>
                         <tr>
@@ -1865,10 +1804,10 @@
                         </tr>
                      </thead>
                   </table>
-                  <!-------------------------------------------Page 6-------------------------------------------------->
+                  <!-------------------------------------------Page 5-------------------------------------------------->
                   <div style="page-break-before: always;"></div>
                   <div class="col-md-12">
-                     <center><img class="img-responsive" src="{{ asset('images/header_fe_admissionForm.jpg') }}"></center>
+                     <center><img class="img-responsive" src="{{ asset('public/images/header_fe_admissionForm.jpg') }}"></center>
                   </div>
                   <table>
                      <thead>
@@ -1882,134 +1821,134 @@
                            <td id="line" colspan="6">
                               <p align="justify">
                                  This is to certify that Mr./Miss. <b>{{ $users1[0]->name_on_marksheet }}</b> has taken provisional admission in our Institute for the
-                                 Academic Year: 2019-20 in the Course of Bachelors Year of Engineering, {{$users1['shift_allotted']}}
+                                 Academic Year: 2020-21 in the Course of Bachelors Year of Engineering, {{$users1['shift_allotted']}}
                               </p>
                               <p>The following original certificates of the student have been retained with us for the admission purpose.</p>
                            </td>
                         </tr>
                         @if( $users1[0]->fc_confirmation_receipt == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;FC Confirmation Receipt</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive" style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;eScutiny Centre Confirmation</td>
                         </tr>
                         @endif
                         @if( $users1[0]->dte_allotment_letter == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;DTE Allotment Letter</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;DTE Allotment Letter</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->arc_ackw_receipt == 'Yes')
-                        <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;ARC Acknowledgement</td>
-                        </tr>
-                        @endif
+                        <!--@if( $users1[0]->arc_ackw_receipt == 'Yes')-->
+                        <!--<tr>-->
+                        <!--   <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;ARC Acknowledgement</td>-->
+                        <!--</tr>-->
+                        <!--@endif-->
                         @if( $users1[0]->cet_result == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;CET Result</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;CET Result</td>
                         </tr>
                         @endif
                         @if( $users1[0]->ssc_marksheet == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;SSC Marksheet</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;SSC Marksheet</td>
                         </tr>
                         @endif
                         @if( $users1[0]->hsc_marksheet == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;HSC / Diploma Marksheet</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;HSC / Diploma Marksheet</td>
                         </tr>
                         @endif
-                        @if( $users1[0]->hsc_passing_certi == 'Yes')
-                        <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Convocation/Passing Certificate</td>
-                        </tr>
-                        @endif
+                        <!--@if( $users1[0]->hsc_passing_certi == 'Yes')-->
+                        <!--<tr>-->
+                        <!--   <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Convocation/Passing Certificate</td>-->
+                        <!--</tr>-->
+                        <!--@endif-->
                         @if( $users1[0]->hsc_leaving_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Convocation/Passing Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Leaving Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->migration_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Migration Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Migration Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->birth_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Birth Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Birth Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->domicile == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Domicile Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Domicile Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->proforma_o == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma O</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma O</td>
                         </tr>
                         @endif
                         @if( $users1[0]->retention == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Retention Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Retention Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->minority_affidavit == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Minority Affidavit</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Minority Affidavit</td>
                         </tr>
                         @endif
                         @if( $users1[0]->gap_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Gap Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Gap Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->community_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Community Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Community Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->caste_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Caste Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Caste Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->caste_validity_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Caste Validity Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Caste Validity Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->non_creamy_layer_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Non-Creamy Layer Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Non-Creamy Layer Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->proforma_a_b1_b2 == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma A B1 B2</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma A B1 B2</td>
                         </tr>
                         @endif
                         @if( $users1[0]->income_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Income Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Income Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->proforma_c_d_e == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma C D E</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma C D E</td>
                         </tr>
                         @endif
                         @if( $users1[0]->proforma_j_k_l == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma J K L</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Proforma J K L</td>
                         </tr>
                         @endif
                         @if( $users1[0]->medical_certi == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Physical Fitness Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Physical Fitness Certificate</td>
                         </tr>
                         @endif
                         @if( $users1[0]->anti_ragging_affidavit == 'Yes')
                         <tr>
-                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Anti Ragging Certificate</td>
+                           <td id="line" colspan="6" style="font-weight: bold;font-size:12px;"><img class="img-responsive"style="height:10px; display:inline; " max-width="100%" src="{{ asset('public/images/glyphicon-ok.jpg') }}">&nbsp;&nbsp;&nbsp;Anti Ragging Certificate</td>
                         </tr>
                         @endif
                         <tr>
@@ -2034,26 +1973,26 @@
                   <br><br><br><br>
                   <footer style="position:absolute; bottom:0;">
                   <div class="col-md-12">
-                     <img class="img-responsive" src="{{ asset('images/cut_here.jpg') }}" style="background-size:cover;width:1100px;height:10px;">
+                     <img class="img-responsive" src="{{ asset('public/images/cut_here.jpg') }}" style="background-size:cover;width:1100px;height:10px;">
                   </div>
                   <br>
-                      <!--   <table class="footerposition" cellspacing="10">
+                        <table class="footerposition" cellspacing="10">
                    <tr style= "height:200px;">
                       <td style="border-radius:15px;border:2px solid black;padding: 5px;">
                         <div style="width: 340px;">
-                        <div style="border-radius:15px;margin-top:-90px;" height="1"><img style="width:340px;height:30px; border-radius:20px;" src="{{ asset('images/id.JPG') }}"></div>
+                        <div style="border-radius:15px;margin-top:-90px;" height="1"><img style="width:340px;height:30px; border-radius:20px;" src="{{ asset('public/images/id.JPG') }}"></div>
                             <img align="left" src="{{ asset('/public/uploads/'.$users1[0]->dte_id.'_'.$users1['hash'].'/'.$users1[0]->photo_path) }}" style="height: 70px; margin-top:50px;" alt="Missing Image" width="60px" max-width="100%"/>
                      </div>
                      <br>
                 <div style="float:left;">
                     <p style="font-size:12px; margin-top:2px; margin-left:80px"><b><br>Provisional ID-Card</b></font></p>
-                    <p style="font-size:10px;"><b>&nbsp;&nbsp;&nbsp;&nbsp;ADMISSION YEAR 2019-2020</b></p>
+                    <p style="font-size:10px;"><b>&nbsp;&nbsp;&nbsp;&nbsp;ADMISSION YEAR 2020-2021</b></p>
                     <p style=" margin-top:-5px;"><b style="font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp;NAME:</b> {{ $users1[0]->last_name }} {{ $users1[0]->first_name }} {{$users1[0]->middle_name}}</p>
                     <p style=" margin-top:-5px;"><b style="font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp;D.O.B:</b>{{ $users1[0]->date_of_birth}}<b style="font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B.Group:{{$users1[0]->blood_group}}</b></p>
                     <p style=" margin-top:-5px;"><b style="font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp;LIB CARD NO:</b></p>
                     <p style=" margin-top:5px;"><b style="font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp;BE:{{$users1[0]->dte_branch}}</b></p>
-                    <div style="margin-left:185px;"><img style="height:50px;margin-top:-30px;" max-width="100%" src="{{ asset('images/asmasign.jpg') }}"></div>
-                    <p style="margin-left:190px; margin-top:20px;"><b style="font-size:10px;">Admission In-charge</b></p>
+                    <div style="margin-left:185px;"><img style="height:40px;margin-top:-40px;" max-width="100%" src="{{ asset('public/images/asmasign.jpg') }}"></div>
+                    <p style="margin-left:190px; "><b style="font-size:10px;">Admission In-charge</b></p>
                 </div>
                       </td>
                       <td style="float:right;text-align:left;width: 340px;border-radius:15px;border:2px solid black;padding: 5px;">
@@ -2069,12 +2008,12 @@
                         <font size="0">4.This card should be surrendered on completion of engineering for obtaining leaving &nbsp;&nbsp;certificate.</font>
                         </div>
                         <div class="style3">
-                        <font size="2"><b style="text-align: center"><center>Validity of the card:DEC-2019</center></b></font>
+                        <font size="2"><b style="text-align: center"><center>Validity of the card:DEC-2021</center></b></font>
                         </div>
                         </div> 
                       </td>
                    </tr>
-               </table> -->
+               </table> 
                </footer>
                </div>
             </div>

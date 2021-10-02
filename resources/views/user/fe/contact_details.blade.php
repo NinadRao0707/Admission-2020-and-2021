@@ -161,7 +161,7 @@ function myFunction() {
                     <td>Fill details in the respective boxes correctly.</td>
                   </tr>
                   <tr>
-                    <td>Is Correspondence Address same as Permanent Address?</td>
+                    <td>Is Correspondence Addess same as Permanent Address?</td>
                     <td>Select this if your permanent and correspondence address is same. Your correspondence address will be automatically filled.</td>
                     <td>Tick the Checkbox.</td>
                   </tr>
@@ -178,11 +178,6 @@ function myFunction() {
                   <tr>
                     <td>Local Guardian Name and Address</td>
                     <td>Fill these details if you are from other parts of India. These details are compulsory for <font style="font-weight: bold;">OUTSTATION</font> students.</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Contact Details-Phone number:</td>
-                    <td>Please do not use STD codes while filling up telephone details.</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -231,11 +226,11 @@ function myFunction() {
              
               <script type="text/javascript">
               document.getElementById("permanentAddressCity").onkeypress=function(e)
-              { 
-                var e=window.event || e 
-                var keyunicode=e.charCode || e.keyCode 
-                return (keyunicode>=65 && keyunicode<=90 || keyunicode>=97 && keyunicode<=122 || keyunicode==8 || keyunicode==32)? true : false 
-              }
+                              { 
+                              var e=window.event || e 
+                              var keyunicode=e.charCode || e.keyCode 
+                              return (keyunicode>=65 && keyunicode<=90 || keyunicode>=97 && keyunicode<=122 || keyunicode==8 || keyunicode==32)? true : false 
+                              }
               </script>
             </div>
 
@@ -523,8 +518,8 @@ function myFunction() {
         </div>
         <div id="notLocalRes" style="display:none;">
         <div class="form-group col-md-12 col-sm-12">
-          <label for="localGuardianName">Local Guardian Name<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="localGuardianName" name="localGuardianName" value="{{$user1[0]->local_guardian_name}}" placeholder="Local Guardian Name" <?php if( $user1[0]->resident_of == "Local") echo 'disabled' ?>>
+          <label for="localGuardianName">Local Guadian Name<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
+          <input type="text" class="form-control" id="localGuardianName" name="localGuardianName" value="{{$user1[0]->local_guardian_name}}" placeholder="Local Guadian Name" <?php if( $user1[0]->resident_of == "Local") echo 'disabled' ?>>
           
           <script type="text/javascript">
           document.getElementById("localGuardianName").onkeypress=function(e)
@@ -536,7 +531,7 @@ function myFunction() {
         </script>
         </div>
         <div class="form-group col-md-12 col-sm-12">
-          <label>Local Guardian Address<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
+          <label>Local Guadian Address<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
         </div>
         <div class="form-group col-md-6 col-sm-12">
           <label for="localGuardianAddressLine1">Address Line 1<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
