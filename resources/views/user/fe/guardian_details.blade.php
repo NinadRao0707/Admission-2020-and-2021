@@ -111,7 +111,7 @@ function myFunction() {
               <tbody>
                 <tr>
                   <td>Husband / Father</td>
-                  <td>Select Husband if you are a married woman. In this case you husband will be considered as your guardian and fill the following details accordingly.</td>
+                  <td>Select Husband if you are a married woman. In this case, your husband will be considered as your guardian and fill the following details accordingly.</td>
                   <td>Select the appropriate option.</td>
                 </tr>
                 <tr>
@@ -186,7 +186,7 @@ function myFunction() {
       </div>
       <div class="form-group col-md-3 col-sm-12">
         <label for="firstName">First Name<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-        <input type="text" class="form-control" id="firstName" name="firstName" value="{{$user1[0]->g_first_name}}" placeholder="First Name" onkeyup="nospaces(this)" required>
+        <input type="text" onpaste="return false;" ondrop="return false;" class="form-control" id="firstName" name="firstName" value="{{$user1[0]->g_first_name}}" placeholder="First Name" onkeyup="nospaces(this)" required>
       <script type="text/javascript">
         function nospaces(t){
           if(t.value.match(/\s/g)){
@@ -205,7 +205,7 @@ function myFunction() {
       </div>
       <div class="form-group col-md-3 col-sm-12">
         <label for="middleName">Middle Name<label style="color: #eee; font-size: 25px;vertical-align: sub;">*</label></label>
-        <input type="text" class="form-control" id="middleName" name="middleName" value="{{$user1[0]->g_middle_name}}" placeholder="Middle Name" onkeyup="nospaces(this)" >
+        <input type="text" onpaste="return false;" ondrop="return false;" class="form-control" id="middleName" name="middleName" value="{{$user1[0]->g_middle_name}}" placeholder="Middle Name" onkeyup="nospaces(this)" >
         
         <script type="text/javascript">
           document.getElementById("middleName").onkeypress=function(e)
@@ -219,7 +219,7 @@ function myFunction() {
       
       <div class="form-group col-md-3 col-sm-12">
         <label for="lastName" style="margin-top: 11px;">Last Name</label>
-        <input type="text" class="form-control" id="lastName" name="lastName" value="{{$user1[0]->g_last_name}}" placeholder="Last Name" onkeyup="nospaces(this)" style="margin-top: 11px;">
+        <input type="text" onpaste="return false;" ondrop="return false;" class="form-control" id="lastName" name="lastName" value="{{$user1[0]->g_last_name}}" placeholder="Last Name" onkeyup="nospaces(this)" style="margin-top: 11px;">
         
         <script type="text/javascript">
           document.getElementById("lastName").onkeypress=function(e)
@@ -233,7 +233,7 @@ function myFunction() {
       
       <div class="form-group col-md-3 col-sm-12">
         <label for="motherMaidenName">Student's Mother Name<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-        <input type="text" class="form-control" id="motherMaidenName" name="motherMaidenName" value="{{$user1[0]->mother_name}}" placeholder="Mother’s Name" onkeyup="nospaces(this)">
+        <input type="text" onpaste="return false;" ondrop="return false;" class="form-control" id="motherMaidenName" name="motherMaidenName" value="{{$user1[0]->mother_name}}" placeholder="Mother’s Name" onkeyup="nospaces(this)">
         
         <script type="text/javascript">
           document.getElementById("motherMaidenName").onkeypress=function(e)
@@ -361,7 +361,7 @@ function myFunction() {
       <div id="parentDom">
         <div class="form-group col-md-6 col-sm-12">
           <label for="parentDomecileNo">Parent’s Domicile No.<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label> 
-          <input type="text" class="form-control" id="parentDomecileNo" name="parentDomecileNo" value="{{$user1[0]->parent_domicile_no}}" placeholder="Parent’s Domicile No">
+          <input type="text" class="form-control" id="parentDomecileNo" name="parentDomecileNo" value="{{$user1[0]->parent_domicile_no}}"onKeyUp="$(this).val($(this).val().replace(/[^\d]/ig, ''))" placeholder="Parent’s Domicile No">
           
         </div>
         <div class="form-group col-md-6 col-sm-12">

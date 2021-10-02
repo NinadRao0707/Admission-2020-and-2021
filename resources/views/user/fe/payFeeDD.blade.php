@@ -46,7 +46,7 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="drawee">Drawee<label style="color: #eee; font-size: 25px;vertical-align: sub;">*</label></label>
-                <input type="text" class="form-control" id="drawee" name="drawee" value="VESIT" readonly>
+                <input type="text" class="form-control" id="drawee" name="drawee" value="VES Institute of Technology" readonly>
             </div>
             <div class="form-group col-md-6">
                 <label for="dd_date">DD Date<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>

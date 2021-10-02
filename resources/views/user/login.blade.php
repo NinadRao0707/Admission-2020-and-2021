@@ -73,7 +73,7 @@ input {
    @endif    
  
            <!--<label for="dteId">Application ID</label>-->
-           <label for="text" class="has-tip" data-tip="As on 'eScutiny Acknoledgement Recipt' Example: MEG:ME20XXXXXX MCA:MC20XXXXXX BE:EN20XXXXXX DSE:DSE20XXXXXX">Application ID</label>
+           <label for="text" class="has-tip" data-tip="As on 'eScutiny Acknoledgement Recipt' Example: MEG:ME21XXXXXX MCA:MC21XXXXXX BE:EN21XXXXXX DSE:DSE21XXXXXX">Application ID</label>
          <input type="text" class="form-control dteId" id="dteId" name="dteId" onkeydown="upperCaseF(this)" placeholder="Application ID"  />
          <!--<span>As on E-scrutiny Acknoledgement recipt MEG:ME20XXXXXX MCA:MC20XXXXXX BE:EN20XXXXXX DSE:DSE20XXXXXX </span>-->
                    

@@ -155,6 +155,22 @@
                </tbody>
             </table>
          </div>
+         
+         <div class="checkbox" style="margin-left: 15px">
+            <label><input type="checkbox" class="form-check-input" id="fe_final_check1" required><strong>I agree that all the details filled by me are correct and the documents submitted are original.</strong></label>
+         </div>
+         @if(Session('log_acap')!="yes")
+         @if($usercategory[0]->category == 'OBC' || $usercategory[0]->category == 'EBC' || $usercategory[0]->category == 'SC' || $usercategory[0]->category == 'ST' || $usercategory[0]->category == 'VJ' || $usercategory[0]->category == 'DT' || $usercategory[0]->category == 'NT' || $usercategory[0]->category == 'SBC' || $usercategory[0]->category == 'TFWS')
+         <div class="checkbox" style="margin-left: 15px">
+            <label><input type="checkbox" class="form-check-input" id="fe_final_check2" required><strong>I agree that I belong to reserved category.</strong></label>
+         </div>
+         @endif
+         @if($partpaycheck == 'true')
+         <div class="checkbox" style="margin-left: 15px">
+            <label><input type="checkbox" class="form-check-input" id="fe_final_check3" required><strong>I agree that I have done part payment.</strong></label>
+         </div>
+         @endif
+         @endif
          @if(Session('log_acap')!="yes")
          <div class="form-group col-md-10">
             <a href="{{ route('fe_final_submit') }} ">

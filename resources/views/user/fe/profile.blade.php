@@ -37,15 +37,13 @@ tr:nth-child(even){background-color: #f2f2f2}
       <br>
       <div class="col-md-12">
           <ul style="list-style-type:circle;color:red;font-size:20px;">
-          <!--<li style="list-style-type:square;"><b>Note : Rs.100 to be paid as registration charges at the time of Document Verification.</b></li>-->
-           <li style="list-style-type:square;"><b>Note : To participate in the Against CAP admission process, the candidate has to pay Rs 1000+Rs180 (GST).The payment link will be activated on 27th Jan(11:59 P.M) to 28th Jan 2021 (4:30 P.M) .</b></li>
+          <!-- <li style="list-style-type:square;"><b>Note : Rs.100 to be paid as registration charges at the time of Document Verification.</b></li> -->
           
-          <li>If you are alloted through DTE, then select DTE.
+          <li>If you are allotted through DTE, then select DTE.
           ( Dte Student does not have to bring print out of the form. )</li>
-          <!--<li>-->
-          <!--Candidate who wants to apply for against CAP vacancy seats that may arise after final CAP Round III,click on ACAP [for change in shift or betterment of branch]</li>-->
-          <!--<li>-->
-          <!--( Students who has register for ACAP Vacancy Seats have to bring printout of the form. )</li>-->
+          <li>
+          Candidate who wants to apply for against CAP vacancy seats that may arise after final CAP Round III, click on ACAP [for change in shift or betterment of branch]</li>
+          
           </ul>
           
       </div>
@@ -133,6 +131,7 @@ tr:nth-child(even){background-color: #f2f2f2}
               @endif
 
                @if($status_acap=='REGISTERED' || $status_acap=='START' || $status_acap=='INITIATED' || $status_acap=='Eligible For Acap')
+               
                <td style="background-color: #204a84"><a href="{{route('view',$acap->event_type)}}"><button type="button" class="btn btn-success btn-view" style="width: 100%; text-transform: uppercase; border: 0px" <?php echo 'disabled'; ?>
                         >View Form</button></a>
                 </td>
@@ -142,19 +141,7 @@ tr:nth-child(even){background-color: #f2f2f2}
               @endif
               </tr>
               @endforeach
-                <tr>
-                    <td   colspan="3" >  NOTE : THE PAYMENT LINK WILL BE ACTIVATED ON <strong>27<sup>th</sup> JAN </strong>(AFTER 11.59AM) TO <strong>28<sup>th</sup>JAN</strong> (TILL 4.30PM )  </td>
-                   
-                    <td style="text-transform: uppercase;background-color: #204a84" colspan="3"  > <a href="fe_acap_form_payment"><button type="button"  class="btn btn-success btn-view " style="width: 100%; text-transform: uppercase; border: 0px"  
-                      <?php 
-                    //   if($status_acap!='SUBMITTED' || $paymentdone!=null)
-                         echo('disabled');
-                      ?>
-                  >PAY ACAP FEES</button></a> </td>
-                    
 
-
-                 </tr>
            </tbody>
          </table>
          </div>

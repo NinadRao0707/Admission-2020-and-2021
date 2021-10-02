@@ -167,12 +167,13 @@
 
               <script>
                 function getMessage() {
-
+                  var mailformat = /(.+)@(.+){2,}\.(.+){2,}/;
                   var num = document.getElementById('email').value;
-                  if (num == "") {
-                    alert("Please Enter Email ID.");
+                  if (num == "" || !(num.match(mailformat))) {
+                    alert("Please Enter Valid Email ID.");
                     document.getElementById('email').focus();
-                  } else {
+                  } 
+                  else {
 
                     document.getElementById('timerDiv').style.display = "block";
                     clock();
@@ -189,8 +190,8 @@
                     },
                     type: 'POST',
                     //Undo these changes for live website
-                     url: '/getmail', //for localhost
-                    //url:'/admissionForms/pg/index.php/getmail', //This is for live website
+                    url: '/getmail', //for localhost
+                    // url:'/admissionForms/pg/index.php/getmail', //This is for live website
                     data: {
                       email1: $("#email").val()
 
