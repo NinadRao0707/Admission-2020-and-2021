@@ -251,7 +251,7 @@ function myFunction() {
         
 
         
-        <input type="radio" id="r1"  onclick="reserved()" required value="Reserverd" name="cat_Radio">Reserved
+        <input type="radio" id="r1"  onclick="reserved()" required value="Reserverd" name="cat_Radio">Reserverd
         <input type="radio" id="r2" onclick="Minority()"  value="Minority" name="cat_Radio">Minority
         <input type="radio" id="r3" onclick="General()"  value="General" name="cat_Radio">General
         <script type="text/javascript">
@@ -335,13 +335,6 @@ function myFunction() {
       </div>
 
       </div>
-      <script>
-          $('input[name="cat_Radio"]').change(function() {
-            if($(this).is(':checked') && $(this).val() == 'Reserverd') {
-                $('#categoryModal').modal('show');
-            }
-          });
-      </script>
      
       <div class="form-group col-md-6 col-sm-12">
         <label for="candidate_types">Candidate Type<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
@@ -393,56 +386,6 @@ function myFunction() {
   </div>
 </div>
 <br><br><br>
-<!-- Undertaking Form Start -->
-<div class="modal" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">UNDERTAKING FOR ALL (EBC/ OBC/ SBC/ VJ/ NT/ SC & ST) CATEGORY STUDENTS</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
-      
-      <div class="modal-body">
-        <a class="text-body">
-					I, Mr. / Mrs. 
-					<b>
-            _______________
-					</b> hereby solemnly affirm that, my ward Mr. / Ms. 
-					<b>
-            _______________
-					</b> has taken admission to the 
-					<b> 
-            _______________
-					</b> of 
-					<b>
-            _______________
-					</b> course in <b> _______________ </b> for the Academic Year <b>2021-22</b>
-					in V.E.S. Institute of Technology, Chembur – 400074. <br>
-					<br>
-					We are aware of the fees structure email sent to all students from vesit.accounts@ves.ac.in. <br>
-					<br>
-					We further know that the balance fees payable by my ward towards Tuition Fees / Development Fees will be reimbursed 
-					by Government to college after successful submission of Scholarship form <b>by my ward</b>. <br>
-					<br>
-					I undertake that my ward will be solely responsible to fill the Scholarship form for respective Caste / Category and 
-					submit the form with required documents within the prescribed time as per the notification of Institute / Government 
-					and if in case he / she fails to submit the application form with all required documents or if the government does not 
-					approve the course / sanction the Freeship / Scholarship form because of non-submission of documents / any of the document 
-					or certificate is found to be a invalid or fraudulent and / or does not meet the eligibility norms / or fails to apply 
-					for Scholarship within the prescribed time, then I will be responsible and liable to pay the remaining / Tuition fees / Development fees.
-				</a>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-{{-- Undertaking Form Close --}}
 </body>
 @endsection
 
