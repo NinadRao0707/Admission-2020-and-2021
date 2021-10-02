@@ -8,15 +8,15 @@ sc<!doctype html>
     <meta http-equiv="pragma" content="no-cache" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Vivekanand Education Society's Institute of Technology</title>
-    <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
-    <link rel="icon" href="{{ asset('public/images/favicon.png') }}" type="image/png">
-    <script src="{{ asset('public/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
-    <link href="{{ asset('public/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/css/adminStyle.css') }}" rel="stylesheet" media="all">
-    <link href="{{ asset('public/css/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/png">
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/adminStyle.css') }}" rel="stylesheet" media="all">
+    <link href="{{ asset('css/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    <link href="{{ asset('public/css/fileinput.css') }}" media="all" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/fileinput.css') }}" media="all" rel="stylesheet" type="text/css" />
   </head>
   <header>
     <div class="container-fluid head-banner">
@@ -35,7 +35,7 @@ sc<!doctype html>
               @endif
             </font>
           </div>
-        <div class="logo"><img src="{{ asset('public/images/logo.png') }}" class="img-responsive" /></div>
+        <div class="logo"><img src="{{ asset('images/logo.png') }}" class="img-responsive" /></div>
         <div class="col-md-12">
           @if(session('role') == 'Admin' || session('role') == 'Super Admin')
           <div class="topnav" id="myTopnav">
@@ -176,7 +176,7 @@ sc<!doctype html>
                             </div>
                             <div class="modal-body">
                               <center>
-                              <img src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->photo_path) }}" width="500">
+                              <img src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->photo_path) }}" width="500">
                               </center>
                             </div>
                             <div class="modal-footer">
@@ -273,7 +273,7 @@ sc<!doctype html>
                             </div>
                             <div class="modal-body">
                               <center>
-                              <img src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->signature_path) }}" width="500">
+                              <img src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->signature_path) }}" width="500">
                               </center>
                             </div>
                             <div class="modal-footer">
@@ -368,8 +368,8 @@ sc<!doctype html>
                               <h4 class="modal-title">eScutiny Centre Confirmation Receipt</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->fc_confirmation_receipt_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->fc_confirmation_receipt_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->fc_confirmation_receipt_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->fc_confirmation_receipt_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -465,8 +465,8 @@ sc<!doctype html>
                               <h4 class="modal-title">DTE Allotment Letter</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->dte_allotment_letter_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->dte_allotment_letter_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->dte_allotment_letter_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->dte_allotment_letter_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -562,8 +562,8 @@ sc<!doctype html>
                               <h4 class="modal-title">ARC Acknowledgement</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->arc_ackw_receipt_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->arc_ackw_receipt_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->arc_ackw_receipt_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->arc_ackw_receipt_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -659,8 +659,8 @@ sc<!doctype html>
                               <h4 class="modal-title">GATE Result</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->gate_result_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->gate_result_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->gate_result_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->gate_result_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -756,8 +756,8 @@ sc<!doctype html>
                               <h4 class="modal-title">CET Result</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->cet_result_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->cet_result_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->cet_result_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->cet_result_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -855,8 +855,8 @@ sc<!doctype html>
                               <h4 class="modal-title">SSC Marksheet</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->ssc_marksheet_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->ssc_marksheet_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->ssc_marksheet_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->ssc_marksheet_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -954,8 +954,8 @@ sc<!doctype html>
                               <h4 class="modal-title">HSC / Diploma Marksheet</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->hsc_diploma_marksheet_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->hsc_diploma_marksheet_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->hsc_diploma_marksheet_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->hsc_diploma_marksheet_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -1051,8 +1051,8 @@ sc<!doctype html>
                               <h4 class="modal-title">HSC / Diploma Marksheet</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->hsc_marksheet_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->hsc_marksheet_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->hsc_marksheet_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->hsc_marksheet_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -1150,8 +1150,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Degree Leaving/Transfer Certificate</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->degree_leaving_tc_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->degree_leaving_tc_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->degree_leaving_tc_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->degree_leaving_tc_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -1248,8 +1248,8 @@ sc<!doctype html>
                               <h4 class="modal-title">First Year Marksheet</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->first_year_marksheet_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->first_year_marksheet_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->first_year_marksheet_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->first_year_marksheet_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -1346,8 +1346,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Second Year Marksheet</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->second_year_marksheet_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->second_year_marksheet_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->second_year_marksheet_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->second_year_marksheet_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -1444,8 +1444,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Third Year Marksheet</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->third_year_marksheet_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->third_year_marksheet_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->third_year_marksheet_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->third_year_marksheet_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -1542,8 +1542,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Fourth Year Marksheet</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->fourth_year_marksheet_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->fourth_year_marksheet_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->fourth_year_marksheet_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->fourth_year_marksheet_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -1640,8 +1640,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Convocation Certificate</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->convocation_passing_certi_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->convocation_passing_certi_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->convocation_passing_certi_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->convocation_passing_certi_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -1738,8 +1738,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Migration Certificate</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->migration_certi_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->migration_certi_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->migration_certi_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->migration_certi_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -1836,8 +1836,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Birth Certificate</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->birth_certi_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->birth_certi_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->birth_certi_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->birth_certi_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -1934,8 +1934,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Domicile Certificate</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->domicile_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->domicile_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->domicile_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->domicile_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -2032,8 +2032,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Proforma O</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->proforma_o_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->proforma_o_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->proforma_o_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->proforma_o_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -2130,8 +2130,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Retention Certificate</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->retention_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->retention_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->retention_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->retention_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -2228,8 +2228,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Minority Affidavit</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->minority_affidavit_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->minority_affidavit_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->minority_affidavit_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->minority_affidavit_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -2325,8 +2325,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Gap Certificate</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->gap_certi_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->gap_certi_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->gap_certi_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->gap_certi_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -2423,8 +2423,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Community Certificate</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->community_certi_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->community_certi_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->community_certi_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->community_certi_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -2522,8 +2522,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Caste Certificate</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->caste_certi_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->caste_certi_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->caste_certi_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->caste_certi_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -2620,8 +2620,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Caste Validity Certificate</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->caste_validity_certi_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->caste_validity_certi_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->caste_validity_certi_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->caste_validity_certi_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -2718,8 +2718,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Non-Creamy Layer Certificate</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->non_creamy_layer_certi_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->non_creamy_layer_certi_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->non_creamy_layer_certi_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->non_creamy_layer_certi_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -2816,8 +2816,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Proforma H</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->dte_allotment_letter_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->dte_allotment_letter_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->dte_allotment_letter_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->dte_allotment_letter_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -2914,8 +2914,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Proforma A B1 B2</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->proforma_a_b1_b2_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->proforma_a_b1_b2_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->proforma_a_b1_b2_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->proforma_a_b1_b2_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -3014,8 +3014,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Income Certificate</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->income_certi_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->income_certi_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->income_certi_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->income_certi_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -3112,8 +3112,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Proforma C D E</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->proforma_c_d_e_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->proforma_c_d_e_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->proforma_c_d_e_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->proforma_c_d_e_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -3210,8 +3210,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Proforma J K L</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->proforma_j_k_l_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->proforma_j_k_l_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->proforma_j_k_l_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->proforma_j_k_l_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -3308,8 +3308,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Physical Fitness Certificate</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->medical_certi_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->medical_certi_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->medical_certi_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->medical_certi_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -3406,8 +3406,8 @@ sc<!doctype html>
                               <h4 class="modal-title">Anti Ragging Certificate</h4>
                             </div>
                             <div class="modal-body">
-                              <object data="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->anti_ragging_affidavit_path) }}" type="application/pdf" width="100%" height="700px">
-                            <embed src="{{ asset('public/uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->anti_ragging_affidavit_path) }}" width="1200px" height="800px" />
+                              <object data="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->anti_ragging_affidavit_path) }}" type="application/pdf" width="100%" height="700px">
+                            <embed src="{{ asset('uploads/'.$users[0]->dte_id.'_'.$hash.'/'.$users[0]->anti_ragging_affidavit_path) }}" width="1200px" height="800px" />
                             </embed>
                             </object>
                             </div>
@@ -3569,7 +3569,7 @@ document.getElementById("mail").innerHTML =text ;
       </div>
       <br><br><br>
     </div>
-    <script src="{{ asset('public/js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
   </body>
   <footer class="footer">
     <div class="container">

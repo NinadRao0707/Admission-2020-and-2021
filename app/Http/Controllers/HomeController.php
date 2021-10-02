@@ -614,7 +614,7 @@ class HomeController extends Controller
       $encPaymode = (new static)->aes128Encrypt($paymode,$key);
       $encReturn =(new static)->aes128Encrypt($returnurl,$key);
      //return $encRef;
-    //  return view('user.paymentGateway')->with('refNo',$refNo)->with('submerchantid',$submerchantid)->with('paymode',$paymode)->with('amount',$amount);
+return view('user.paymentGateway')->with('refNo',$refNo)->with('submerchantid',$submerchantid)->with('paymode',$paymode)->with('amount',$amount);
 //fe-dse 131198
       //icid=183625
                
@@ -11342,8 +11342,9 @@ if($userprogress[0]->is_guardian_completed==0){
 
                $pdf = PDF::loadView('user.fe.pdfview_acap_fe');
                 //return $users1;
+               return view('user.fe.pdfview_acap_fe',$users1);
             return $pdf->stream('user.fe.pdfview_acap_fe.pdf');
-                return view('user.fe.pdfview_acap_fe',$users1);
+                
 
             
             }

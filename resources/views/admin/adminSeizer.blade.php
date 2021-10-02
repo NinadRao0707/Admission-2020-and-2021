@@ -8,16 +8,16 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Vivekanand Education Society's Institute of Technology</title>
-    <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
-    <link rel="icon" href="public/images/favicon.png') }}" type="image/png">
-    <link href="{{ asset('public/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/css/adminStyle.css') }}" rel="stylesheet" media="all">
-    <link href="{{ asset('public/css/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png') }}" type="image/png">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/adminStyle.css') }}" rel="stylesheet" media="all">
+    <link href="{{ asset('css/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700"  rel="stylesheet" type="text/css">
-    <link href="{{ asset('public/css/fileinput.css') }}" media="all" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('public/css/bootstrap.min.css') }}">
-    <script src="{{ asset('public/js/jquery.js') }}"></script>
-    <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
+    <link href="{{ asset('css/fileinput.css') }}" media="all" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/bootstrap.min.css') }}">
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
   </head>
   <header>
     <div class="container-fluid head-banner">
@@ -36,7 +36,7 @@
               @endif
           </font>
         </div>
-        <div class="logo"><img src="{{ asset('public/images/logo.png') }}" class="img-responsive" /></div>
+        <div class="logo"><img src="{{ asset('images/logo.png') }}" class="img-responsive" /></div>
         <div class="col-md-12">
           @if(session('role') == 'Admin' || session('role') == 'Super Admin')
           <div class="topnav" id="myTopnav">
@@ -610,7 +610,7 @@
     });
 
     </script>
-    <script src="{{ asset('public/js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
   </body>
   <footer class="footer">
     <div class="container">
