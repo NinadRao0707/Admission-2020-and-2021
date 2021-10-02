@@ -320,7 +320,7 @@ class HomeController extends Controller
     return base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $str, MCRYPT_MODE_ECB));
   }
 
-  public static function payFeeDD(Request $request)
+  public static function payFee(Request $request)
   {
     $key = '1862392036201268';
 
