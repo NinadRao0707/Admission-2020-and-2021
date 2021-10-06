@@ -8,22 +8,22 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Vivekanand Education Society's Institute of Technology</title>
-    <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
-    <link rel="icon" href="{{ asset('public/images/favicon.png') }}" type="image/png">
-    <link href="{{ asset('public/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/css/adminStyle.css') }}" rel="stylesheet" media="all">
-    <link href="{{ asset('public/css/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/png">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/adminStyle.css') }}" rel="stylesheet" media="all">
+    <link href="{{ asset('css/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    <link href="{{ asset('public/css/fileinput.css') }}" media="all" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('public/css/bootstrap.min.css') }}">
-    <script src="{{ asset('public/js/jquery.min.js') }}"></script>
-  <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
+    <link href="{{ asset('css/fileinput.css') }}" media="all" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/bootstrap.min.css') }}">
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+  <script src="{{ asset('js/bootstrap.min.js') }}"></script>
   </head>
   <header>
     <div class="container-fluid head-banner">
       <div class="container">
         <div class="col-md-6">
-        <div class="logo"><img src="{{ asset('public/images/logo.png') }}" class="img-responsive" /></div>
+        <div class="logo"><img src="{{ asset('images/logo.png') }}" class="img-responsive" /></div>
         </div>
         <div class="col-md-6">
           <label style="font-size: 30px; color:white;padding-top: 20px; float: left;"><span class="glyphicon glyphicon-documents"></span>  Documents</label>
@@ -85,226 +85,226 @@
 
        @if($user1[0]->photo == 'Yes')
       <div class="item active">
-        <img src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->photo_path) }}" alt="Profile Photo" width="1150" height="800">
+        <img src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->photo_path) }}" alt="Profile Photo" width="1150" height="800">
       </div>
       @endif
       @if($user1[0]->signature == 'Yes')
       <div class="item">
-        <img src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->signature_path) }}" alt="Signature" width="1150" height="800">
+        <img src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->signature_path) }}" alt="Signature" width="1150" height="800">
       </div>
       @endif
       @if($user1[0]->fc_confirmation_receipt == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->fc_confirmation_receipt_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->fc_confirmation_receipt_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->fc_confirmation_receipt_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->fc_confirmation_receipt_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->dte_allotment_letter == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->dte_allotment_letter_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->dte_allotment_letter_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->dte_allotment_letter_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->dte_allotment_letter_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->arc_ackw_receipt == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->arc_ackw_receipt_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->arc_ackw_receipt_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->arc_ackw_receipt_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->arc_ackw_receipt_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->cet_result == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->cet_result_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->cet_result_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->cet_result_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->cet_result_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->ssc_marksheet == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->ssc_marksheet_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->ssc_marksheet_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->ssc_marksheet_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->ssc_marksheet_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->hsc_diploma_marksheet == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->hsc_diploma_marksheet_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->hsc_diploma_marksheet_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->hsc_diploma_marksheet_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->hsc_diploma_marksheet_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->degree_leaving_tc == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->degree_leaving_tc_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->degree_leaving_tc_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->degree_leaving_tc_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->degree_leaving_tc_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->first_year_marksheet == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->first_year_marksheet_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->first_year_marksheet_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->first_year_marksheet_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->first_year_marksheet_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->second_year_marksheet == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->second_year_marksheet_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->second_year_marksheet_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->second_year_marksheet_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->second_year_marksheet_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->third_year_marksheet == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->third_year_marksheet_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->third_year_marksheet_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->third_year_marksheet_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->third_year_marksheet_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->convocation_passing_certi == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->convocation_passing_certi_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->convocation_passing_certi_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->convocation_passing_certi_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->convocation_passing_certi_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->migration_certi == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->migration_certi_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->migration_certi_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->migration_certi_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->migration_certi_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->birth_certi == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->birth_certi_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->birth_certi_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->birth_certi_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->birth_certi_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->domicile == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->domicile_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->domicile_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->domicile_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->domicile_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->proforma_o == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->proforma_o_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->proforma_o_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->proforma_o_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->proforma_o_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->retention == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->retention_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->retention_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->retention_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->retention_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->minority_affidavit == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->minority_affidavit_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->minority_affidavit_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->minority_affidavit_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->minority_affidavit_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->gap_certi == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->gap_certi_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->gap_certi_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->gap_certi_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->gap_certi_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->community_certi == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->community_certi_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->community_certi_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->community_certi_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->community_certi_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->caste_certi == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->caste_certi_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->caste_certi_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->caste_certi_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->caste_certi_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->caste_validity_certi == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->caste_validity_certi_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->caste_validity_certi_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->caste_validity_certi_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->caste_validity_certi_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->non_creamy_layer_certi == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->non_creamy_layer_certi_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->non_creamy_layer_certi_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->non_creamy_layer_certi_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->non_creamy_layer_certi_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->proforma_a_b1_b2 == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->proforma_a_b1_b2_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->proforma_a_b1_b2_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->proforma_a_b1_b2_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->proforma_a_b1_b2_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->income_certi == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->income_certi_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->income_certi_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->income_certi_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->income_certi_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->proforma_c_d_e == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->proforma_c_d_e_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->proforma_c_d_e_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->proforma_c_d_e_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->proforma_c_d_e_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->medical_certi == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->medical_certi_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->medical_certi_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->medical_certi_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->medical_certi_path) }}" />
         </embed>
         </object>
       </div>
       @endif
       @if($user1[0]->anti_ragging_affidavit == 'Yes')
       <div class="item">
-        <object data="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->anti_ragging_affidavit_path) }}" type="application/pdf" width="1150" height="800">
-        <embed src="{{ asset('/public/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->anti_ragging_affidavit_path) }}" />
+        <object data="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->anti_ragging_affidavit_path) }}" type="application/pdf" width="1150" height="800">
+        <embed src="{{ asset('/uploads/'.$user1[0]->dte_id.'_'.$hash.'/'.$user1[0]->anti_ragging_affidavit_path) }}" />
         </embed>
         </object>
       </div>
@@ -353,7 +353,7 @@ $(document).ready(function(){
 });
 </script>
 
-    <script src="{{ asset('public/js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
   </body>
   
   <footer class="footer">
