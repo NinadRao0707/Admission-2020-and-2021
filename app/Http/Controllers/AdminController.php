@@ -3891,16 +3891,17 @@ public static function postAdminSeizer(Request $request)
             else
             { 
                // return $dte_id;
-              DB::select("call insert_status_details_seized('$dte_id','$course')");
+              
               if($course == "MCA"){
               $category = DB::table('mca_students')->select('category','acap_category','university_type')->where('dte_id',$dte_id)->get();
-             
-                $amount =  DB::table('fees_structure')->select('amt')->where('fee_category','GENERAL')->where('board',$category[0]->university_type)->where('course',$course)->get();                
-            //   if($category[0]->university_type=='General(OUTSIDE_MAHARASHTRA)'){
-            //     $amount =  DB::table('fees_structure')->select('amt')->where('fee_category','General(OUTSIDE_MAHARASHTRA)')->where('board',$category[0]->university_type)->where('course',$course)->get();                
-            //   }else{
-            //   $amount =  DB::table('fees_structure')->select('amt')->where('fee_category','General(MAHARASHTRA)')->where('board',$category[0]->university_type)->where('course',$course)->get();
-            // }
+            //  return $category;
+                // $amount =  DB::table('fees_structure')->select('amt')->where('fee_category','General(MAHARASHTRA)')->where('board',$category[0]->university_type)->where('course',$course)->get();    
+                // return$amount;            
+              if($category[0]->university_type=='General(OUTSIDE_MAHARASHTRA)'){
+                $amount =  DB::table('fees_structure')->select('amt')->where('fee_category','General(OUTSIDE_MAHARASHTRA)')->where('board',$category[0]->university_type)->where('course',$course)->get();                
+              }else{
+              $amount =  DB::table('fees_structure')->select('amt')->where('fee_category','General(MAHARASHTRA)')->where('board',$category[0]->university_type)->where('course',$course)->get();
+            }
             }
               
               if($course == "FEG"){
@@ -3961,7 +3962,7 @@ public static function postAdminSeizer(Request $request)
               $adm->admission_category = "ACAP";
               $adm->created_at = date("Y-m-d H:i:s");
               $adm->save();
-
+              DB::select("call insert_status_details_seized('$dte_id','$course')");
               $request->session()->flash('error', $dte_id.' HAS SUCCESSFULLY BEEN SEIZED');
             }
             return redirect()->route('adminSeizer');
@@ -10487,8 +10488,8 @@ public static function AfterSearchAdminPartPayment(Request $request)
                                     if($partpay == '[]' )
                                     {
                                         
-                                      $seat_type = DB::table('mca_students')->select('acap_category','university_type')->where('dte_id',$dte_id)->get();
-                                      
+                                      $seat_type = DB::table('mca_students')->select('category','acap_category','university_type')->where('dte_id',$dte_id)->get();
+                                        
                                       if($seat_type == '[]' || $seat_type[0]->acap_category == null)
                                       {
 
@@ -10504,11 +10505,17 @@ public static function AfterSearchAdminPartPayment(Request $request)
                   $request->session()->put('admissID',$department[0]->admission_id);
                   // $fees = DB::table('fees_structure')->where([['fee_category',$seat_type[0]->acap_category],['course',$course]])->get();
                  
-                    $fees = DB::table('fees_structure')->where([['fee_category','GENERAL'],['course',$course],['board',$seat_type[0]->university_type]])->get();
-               
+                    // $fees = DB::table('fees_structure')->where([['fee_category','GENERAL'],['course',$course],['board',$seat_type[0]->university_type]])->get();
 
+                    if($seat_type[0]->category=='General(OUTSIDE_MAHARASHTRA)'){
+                $fees =  DB::table('fees_structure')->select('amt')->where('fee_category','General(OUTSIDE_MAHARASHTRA)')->where('board',$seat_type[0]->university_type)->where('course',$course)->get();                
+              }else{
+              $fees =  DB::table('fees_structure')->select('amt')->where('fee_category','General(MAHARASHTRA)')->where('board',$seat_type[0]->university_type)->where('course',$course)->get();
+            }
+               
+// to be edited 
                   
-                  //  return $fees;
+                 // return $fees;
                   $request->session()->put('balanceAmt',$user4[0]->balance_amt);
                      $request->session()->put('fees',$fees[0]->amt);
                     $request->session()->put('part',$part['amt']);

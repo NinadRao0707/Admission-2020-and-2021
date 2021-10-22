@@ -197,7 +197,7 @@ function myFunction() {
       </div>
       <div class="form-group col-md-6 col-sm-12">
         <label for="cetScore">CET Score<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-        <input type="number" class="form-control" id="cetScore" max="200" min="0" step="0.01" pattern="[0-9]+(\.[0-9]{0,2})?" title="Enter CET score properly i.e 000.00" name="cetScore" value="{{$user1[0]->cet_score}}" maxlength="6" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Enter CET Score" required>
+        <input type="number" class="form-control" id="cetScore" max="200" min="0" step="0.01" pattern="[0-9]+(\.[0-9]{0,2})?" title="Enter CET score porperly i.e 000.00" name="cetScore" value="{{$user1[0]->cet_score}}" maxlength="6" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Enter CET Score" required>
          
       </div>
        <div class="form-group col-md-6 col-sm-12">
@@ -243,7 +243,7 @@ function myFunction() {
       </div>
       <div class="form-group col-md-6 col-sm-12">
         <label for="mhStateGeneralmeritNo">MH State DTE merit No.<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-        <input type="text" onKeyUp="$(this).val($(this).val().replace(/[^\d]/ig, ''))" class="form-control" id="mhStateGeneralmeritNo" name="mhStateGeneralmeritNo" value="{{$user1[0]->mh_state_general_merit_no}}" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Enter merit no." maxlength="5" required>
+        <input type="text" onKeyUp="$(this).val($(this).val().replace(/[^\d]/ig, ''))" class="form-control" id="mhStateGeneralmeritNo" name="mhStateGeneralmeritNo" value="{{$user1[0]->mh_state_general_merit_no}}" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="Enter merit no." required>
         
       </div>
       <div class="form-group col-md-6 col-sm-12">

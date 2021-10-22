@@ -784,13 +784,13 @@ function myFunction() {
             <div class="form-group col-md-6 col-sm-12">
                 
               <label for="xiiMathObtainedMarks">Obtained Marks in Maths<label style="color: #eee; font-size: 25px;vertical-align: sub;">*</label></label>
-              <input type="number" class="form-control" onKeyUp="$(this).val($(this).val().replace(/[^\d]/ig, ''))" maxlength="3" id="xiiMathObtainedMarks" name="xiiMathObtainedMarks" value="{{$user1[0]->xii_maths_obtained_marks}}" placeholder="Enter Marks" required>
+              <input type="number" class="form-control" onKeyUp="$(this).val($(this).val().replace(/[^\d]/ig, ''))" maxlength="3" id="xiiMathObtainedMarks" name="xiiMathObtainedMarks" value="{{$user1[0]->xii_maths_obtained_marks}}" placeholder="Enter Marks">
            
             </div>
             <div class="form-group col-md-6 col-sm-12">
                 
               <label for="xiiMathMaxMarks">Maximum Marks( Out Of )<label style="color: #eee; font-size: 25px;vertical-align: sub;">*</label></label>
-              <input type="number" class="form-control" id="xiiMathMaxMarks" onKeyUp="$(this).val($(this).val().replace(/[^\d]/ig, ''))" maxlength="3" name="xiiMathMaxMarks" value="{{$user1[0]->xii_maths_max_marks}}" placeholder="Enter Marks" required>
+              <input type="number" class="form-control" id="xiiMathMaxMarks" onKeyUp="$(this).val($(this).val().replace(/[^\d]/ig, ''))" maxlength="3" name="xiiMathMaxMarks" value="{{$user1[0]->xii_maths_max_marks}}" placeholder="Enter Marks">
               
             </div>
           </fieldset>
@@ -955,7 +955,7 @@ function myFunction() {
               { 
                 var e=window.event || e 
                 var keyunicode=e.charCode || e.keyCode 
-                return (keyunicode>=65 && keyunicode<=90 || keyunicode>=97 && keyunicode<=122 || keyunicode==8 || keyunicode==32 )? true : false 
+                return (keyunicode>=65 && keyunicode<=90 || keyunicode>=97 && keyunicode<=122 || keyunicode==8 || keyunicode==32)? true : false 
               }
               </script>
             </div>
@@ -968,7 +968,7 @@ function myFunction() {
               { 
                 var e=window.event || e 
                 var keyunicode=e.charCode || e.keyCode 
-                return (keyunicode>=65 && keyunicode<=90 || keyunicode>=97 && keyunicode<=122 || keyunicode==8 || keyunicode==32 )? true : false 
+                return (keyunicode>=65 && keyunicode<=90 || keyunicode>=97 && keyunicode<=122 || keyunicode==8 || keyunicode==32)? true : false 
               }
               </script>
             </div>
@@ -981,7 +981,7 @@ function myFunction() {
               { 
                 var e=window.event || e 
                 var keyunicode=e.charCode || e.keyCode 
-                return (keyunicode>=65 && keyunicode<=90 || keyunicode>=97 && keyunicode<=122 || keyunicode==8 || keyunicode==32 )? true : false 
+                return (keyunicode>=65 && keyunicode<=90 || keyunicode>=97 && keyunicode<=122 || keyunicode==8 || keyunicode==32)? true : false 
               }
               </script>
             </div>
@@ -995,7 +995,7 @@ function myFunction() {
               { 
                 var e=window.event || e 
                 var keyunicode=e.charCode || e.keyCode 
-                return (keyunicode>=65 && keyunicode<=90 || keyunicode>=97 && keyunicode<=122 || keyunicode==8 || keyunicode==32 || keyunicode==45)? true : false 
+                return (keyunicode>=65 && keyunicode<=90 || keyunicode>=97 && keyunicode<=122 || keyunicode==8 || keyunicode==32)? true : false 
               }
               </script>
             </div>
@@ -1298,7 +1298,7 @@ function myFunction() {
               </div>
               <div class="form-group col-md-12 col-sm-12">
                 <label for="finalCGPA">Final CGPA<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-                <input type="number" step="0.01"  onpaste="return false;" ondrop="return false;" maxlength="5" class="form-control" id="finalCGPA" name="finalCGPA" value="{{$user1[0]->degree_final_cgpa }}" placeholder="Final CGPA">
+                <input type="text"  maxlength="5" class="form-control" id="finalCGPA" name="finalCGPA" value="{{$user1[0]->degree_final_cgpa }}" placeholder="Final CGPA">
                 
               </div>
             </div>
@@ -1668,48 +1668,6 @@ function myFunction() {
         <div class="form-group col-md-6 col-sm-12">
           <button type="submit" class="btn btn-view btn-primary pull-left" id="submits" name="submits" style="width: 100%" >Save and Continue</button>
         </div>
-        <script type="text/javascript">
-                document.getElementById("submits").addEventListener("click",(e) => {
-                  if(document.getElementById("xPassingYear").value > document.getElementById("xiipassingYear").value ){
-                    alert("X Passing Year should be before XII Passing Year")
-                    e.preventDefault()
-                  }
-                  if(document.getElementById("xiipassingYear").value > document.getElementById("degreePassingYear").value ){
-                    alert("XII Passing Year should be before Degree Passing Year")
-                    e.preventDefault()
-                  }
-                  if(parseInt(document.getElementById("xObtainedMarks").value) > parseInt(document.getElementById("xMaximumMarks").value )){
-                    alert("Obtained Marks in X must be less than or equal to Maximum marks")
-                    document.getElementById('xObtainedMarks').value = '';
-                    document.getElementById('xObtainedMarks').focus();
-                    e.preventDefault()
-                  }
-                  if(parseInt(document.getElementById("xiiObtainedMarks").value) > parseInt(document.getElementById("xiiMaximumMarks").value) ){
-                    alert("Obtained Marks in XII must be less than or equal to Maximum marks")
-                    document.getElementById('xiiObtainedMarks').value = '';
-                    document.getElementById('xiiObtainedMarks').focus();
-                    e.preventDefault()
-                  }
-                  if(parseInt(document.getElementById("xiiMathObtainedMarks").value) > parseInt(document.getElementById("xiiMathMaxMarks").value) ){
-                    alert("Obtained Marks in XII Maths must be less than or equal to Maximum marks")
-                    document.getElementById('xiiMathObtainedMarks').value = '';
-                    document.getElementById('xiiMathObtainedMarks').focus();
-                    e.preventDefault()
-                  }
-                  if(parseInt(document.getElementById("degreeMathObtainedMarks").value) > parseInt(document.getElementById("degreeMathMaxMarks").value) ){
-                    alert("Obtained Marks in Degree Maths must be less than or equal to Maximum marks")
-                    document.getElementById('degreeMathObtainedMarks').value = '';
-                    document.getElementById('degreeMathObtainedMarks').focus();
-                    e.preventDefault()
-                  }
-                  if(parseInt(document.getElementById("aggrObtainedMarks").value) > parseInt(document.getElementById("aggrMaximunMarks").value) ){
-                    alert("Aggregate Obtained Marks in Degree must be less than or equal to Maximum marks")
-                    document.getElementById('aggrObtainedMarks').value = '';
-                    document.getElementById('aggrObtainedMarks').focus();
-                    e.preventDefault()
-                  }
-                })
-        </script>
       </form>
     </div>
   </div>

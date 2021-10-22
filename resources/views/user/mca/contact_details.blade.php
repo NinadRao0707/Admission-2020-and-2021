@@ -223,17 +223,17 @@ function myFunction() {
         </div>
         <div class="form-group col-md-6 col-sm-12"> 
           <label for="permanentAddressLine1">Address Line 1<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="permanentAddressLine1" name="permanentAddressLine1" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->permanent_address_line1}}" placeholder="Address Line 1" maxlength="40" required>
+          <input type="text" class="form-control" id="permanentAddressLine1" name="permanentAddressLine1" value="{{$user1[0]->permanent_address_line1}}" placeholder="Address Line 1" required>
           
         </div>
         <div class="form-group col-md-6 col-sm-12">
           <label for="permanentAddressLine2">Address Line 2<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="permanentAddressLine2" name="permanentAddressLine2" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->permanent_address_line2}}" placeholder="Address Line 2" maxlength="40" required>
+          <input type="text" class="form-control" id="permanentAddressLine2" name="permanentAddressLine2" value="{{$user1[0]->permanent_address_line2}}" placeholder="Address Line 2" required>
           
         </div>
         <div class="form-group col-md-4 col-sm-12">
           <label for="permanentAddressCity">City<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="permanentAddressCity" name="permanentAddressCity" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->permanent_city}}" placeholder="Enter City" maxlength="25" required>
+          <input type="text" class="form-control" id="permanentAddressCity" name="permanentAddressCity" value="{{$user1[0]->permanent_city}}" placeholder="Enter City" required>
          
           <script type="text/javascript">
           document.getElementById("permanentAddressCity").onkeypress=function(e)
@@ -246,7 +246,7 @@ function myFunction() {
         </div>
         <div class="form-group col-md-4 col-sm-12">
           <label for="permanentAddressDistrict">District<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="permanentAddressDistrict" name="permanentAddressDistrict" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->permanent_district}}" placeholder="Enter District" maxlength="25" required>
+          <input type="text" class="form-control" id="permanentAddressDistrict" name="permanentAddressDistrict" value="{{$user1[0]->permanent_district}}" placeholder="Enter District" required>
          
           <script type="text/javascript">
           document.getElementById("permanentAddressDistrict").onkeypress=function(e)
@@ -259,7 +259,7 @@ function myFunction() {
         </div>
         <div class="form-group col-md-4 col-sm-12">
           <label for="permanentAddressState">State<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="permanentAddressState" name="permanentAddressState" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->permanent_state}}" placeholder="Enter State" maxlength="25" required>
+          <input type="text" class="form-control" id="permanentAddressState" name="permanentAddressState" value="{{$user1[0]->permanent_state}}" placeholder="Enter State" required>
          
           <script type="text/javascript">
           document.getElementById("permanentAddressState").onkeypress=function(e)
@@ -272,7 +272,7 @@ function myFunction() {
         </div>
         <div class="form-group col-md-6 col-sm-12">
           <label for="permanentAddressPincode">Pincode<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" oninput="checkpin()" onKeyUp="$(this).val($(this).val().replace(/[^\d]/ig, ''))" maxlength="6" onpaste="return false;" ondrop="return false;" class="form-control" id="permanentAddressPincode" name="permanentAddressPincode" value="{{$user1[0]->permanent_pincode}}"  placeholder="Enter Pincode" required>
+          <input type="text" oninput="checkpin()" onKeyUp="$(this).val($(this).val().replace(/[^\d]/ig, ''))" maxlength="6" class="form-control" id="permanentAddressPincode" name="permanentAddressPincode" value="{{$user1[0]->permanent_pincode}}"  placeholder="Enter Pincode" required>
           
 <script type="text/javascript">
           function checkpin(){     
@@ -295,7 +295,7 @@ function myFunction() {
         </div>
         <div class="form-group col-md-6 col-sm-12">
           <label for="permanentAddressNearestRailwayStation">Nearest Railway Station<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="permanentAddressNearestRailwayStation" name="permanentAddressNearestRailwayStation" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->permanent_nearest_rail_station}}" placeholder="Nearest Railway Station" maxlength="25" required>
+          <input type="text" class="form-control" id="permanentAddressNearestRailwayStation" name="permanentAddressNearestRailwayStation" value="{{$user1[0]->permanent_nearest_rail_station}}" placeholder="Nearest Railway Station" required>
           
           <script type="text/javascript">
           document.getElementById("permanentAddressNearestRailwayStation").onkeypress=function(e)
@@ -379,17 +379,17 @@ function myFunction() {
         </div>
         <div class="form-group col-md-6 col-sm-12">
           <label for="currentAddressLine1">Address Line 1<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="currentAddressLine1" name="currentAddressLine1" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->correspondance_address_line1}}" placeholder="Address Line 1" maxlength="40" required>
+          <input type="text" class="form-control" id="currentAddressLine1" name="currentAddressLine1" value="{{$user1[0]->correspondance_address_line1}}" placeholder="Address Line 1" required>
          
         </div>
         <div class="form-group col-md-6 col-sm-12">
           <label for="currentAddressLine2">Address Line 2<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="currentAddressLine2" name="currentAddressLine2" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->correspondance_address_line2}}" placeholder="Address Line 2" maxlength="40" required>
+          <input type="text" class="form-control" id="currentAddressLine2" name="currentAddressLine2" value="{{$user1[0]->correspondance_address_line2}}" placeholder="Address Line 2" required>
          
         </div>
         <div class="form-group col-md-4 col-sm-12">
           <label for="currentAddressCity">City<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="currentAddressCity" name="currentAddressCity" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->correspondance_city}}" placeholder="Enter City" maxlength="25" required>
+          <input type="text" class="form-control" id="currentAddressCity" name="currentAddressCity" value="{{$user1[0]->correspondance_city}}" placeholder="Enter City" required>
          
           <script type="text/javascript">
           document.getElementById("currentAddressCity").onkeypress=function(e)
@@ -402,7 +402,7 @@ function myFunction() {
         </div>
         <div class="form-group col-md-4 col-sm-12">
           <label for="currentAddressDistrict">District<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="currentAddressDistrict" name="currentAddressDistrict" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->correspondance_district}}" placeholder="Enter District" maxlength="25" required>
+          <input type="text" class="form-control" id="currentAddressDistrict" name="currentAddressDistrict" value="{{$user1[0]->correspondance_district}}" placeholder="Enter District" required>
           
           <script type="text/javascript">
           document.getElementById("currentAddressDistrict").onkeypress=function(e)
@@ -415,7 +415,7 @@ function myFunction() {
         </div>
         <div class="form-group col-md-4 col-sm-12">
           <label for="currentAddressState">State<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="currentAddressState" name="currentAddressState" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->correspondance_state}}" placeholder="Enter State"  maxlength="25"required>
+          <input type="text" class="form-control" id="currentAddressState" name="currentAddressState" value="{{$user1[0]->correspondance_state}}" placeholder="Enter State" required>
           
           <script type="text/javascript">
           document.getElementById("currentAddressState").onkeypress=function(e)
@@ -454,7 +454,7 @@ function myFunction() {
         </div>
         <div class="form-group col-md-6 col-sm-12">
           <label for="currentAddressNearestRailwayStation">Nearest Railway Station<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="currentAddressNearestRailwayStation" onpaste="return false;" ondrop="return false;" name="currentAddressNearestRailwayStation" value="{{$user1[0]->correspondance_nearest_rail_station}}"  placeholder="Nearest Railway Station" maxlength="25" required>
+          <input type="text" class="form-control" id="currentAddressNearestRailwayStation" name="currentAddressNearestRailwayStation" value="{{$user1[0]->correspondance_nearest_rail_station}}"  placeholder="Nearest Railway Station" required>
           
           <script type="text/javascript">
           document.getElementById("currentAddressNearestRailwayStation").onkeypress=function(e)
@@ -528,7 +528,7 @@ function myFunction() {
         <div id="notLocalRes" style="display:none;">
         <div class="form-group col-md-12 col-sm-12">
           <label for="localGuardianName">Local Guadian Name<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="localGuardianName" name="localGuardianName" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->local_guardian_name}}" placeholder="Local Guadian Name" maxlength="25" <?php if( $user1[0]->resident_of == "Local") echo 'disabled' ?>>
+          <input type="text" class="form-control" id="localGuardianName" name="localGuardianName" value="{{$user1[0]->local_guardian_name}}" placeholder="Local Guadian Name" <?php if( $user1[0]->resident_of == "Local") echo 'disabled' ?>>
           
           <script type="text/javascript">
           document.getElementById("localGuardianName").onkeypress=function(e)
@@ -544,17 +544,17 @@ function myFunction() {
         </div>
         <div class="form-group col-md-6 col-sm-12">
           <label for="localGuardianAddressLine1">Address Line 1<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="localGuardianAddressLine1" name="localGuardianAddressLine1" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->local_guardian_address_line1}}" placeholder="Address Line 1" maxlength="25" <?php if( $user1[0]->resident_of == "Local") echo 'disabled' ?>>
+          <input type="text" class="form-control" id="localGuardianAddressLine1" name="localGuardianAddressLine1" value="{{$user1[0]->local_guardian_address_line1}}" placeholder="Address Line 1" <?php if( $user1[0]->resident_of == "Local") echo 'disabled' ?>>
           
         </div>
         <div class="form-group col-md-6 col-sm-12">
           <label for="localGuardianAddressLine2">Address Line 2<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="localGuardianAddressLine2" name="localGuardianAddressLine2" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->local_guardian_address_line2}}" placeholder="Address Line 2" maxlength="25" <?php if( $user1[0]->resident_of == "Local") echo 'disabled' ?>>
+          <input type="text" class="form-control" id="localGuardianAddressLine2" name="localGuardianAddressLine2" value="{{$user1[0]->local_guardian_address_line2}}" placeholder="Address Line 2" <?php if( $user1[0]->resident_of == "Local") echo 'disabled' ?>>
           
         </div>
         <div class="form-group col-md-6 col-sm-12">
           <label for="localGuardianAdreessCity">City<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="localGuardianAdreessCity" name="localGuardianAdreessCity" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->local_guardian_city}}" placeholder="Enter City" maxlength="25" <?php if( $user1[0]->resident_of == "Local") echo 'disabled' ?>>
+          <input type="text" class="form-control" id="localGuardianAdreessCity" name="localGuardianAdreessCity" value="{{$user1[0]->local_guardian_city}}" placeholder="Enter City" <?php if( $user1[0]->resident_of == "Local") echo 'disabled' ?>>
           
           <script type="text/javascript">
           document.getElementById("localGuardianAdreessCity").onkeypress=function(e)
@@ -567,7 +567,7 @@ function myFunction() {
         </div>
         <div class="form-group col-md-6 col-sm-12">
           <label for="localGuardianAdreessDristict">District<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="localGuardianAdreessDristict" name="localGuardianAdreessDristict" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->local_guardian_city}}" placeholder="Enter District" maxlength="25" <?php if( $user1[0]->resident_of == "Local") echo 'disabled' ?>>
+          <input type="text" class="form-control" id="localGuardianAdreessDristict" name="localGuardianAdreessDristict" value="{{$user1[0]->local_guardian_city}}" placeholder="Enter District" <?php if( $user1[0]->resident_of == "Local") echo 'disabled' ?>>
           
           <script type="text/javascript">
           document.getElementById("localGuardianAdreessDristict").onkeypress=function(e)
@@ -580,7 +580,7 @@ function myFunction() {
         </div>
         <div class="form-group  col-md-6 col-sm-12 ">
           <label for="localGuardianAddressState">State<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="localGuardianAddressState" name="localGuardianAddressState" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->local_guardian_state}}" placeholder="Enter State" maxlength="25" <?php if( $user1[0]->resident_of == "Local") echo 'disabled' ?>>
+          <input type="text" class="form-control" id="localGuardianAddressState" name="localGuardianAddressState" value="{{$user1[0]->local_guardian_state}}" placeholder="Enter State" <?php if( $user1[0]->resident_of == "Local") echo 'disabled' ?>>
           
           <script type="text/javascript">
           document.getElementById("localGuardianAddressState").onkeypress=function(e)

@@ -394,29 +394,23 @@ function myFunction() {
       <div id="parentDom">
         <div class="form-group col-md-6 col-sm-12">
           <label for="parentDomecileNo">Parent’s Domicile No.<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label> 
-          <input type="text" class="form-control" id="parentDomecileNo" name="parentDomecileNo" maxlength="30" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->parent_domicile_no}}" placeholder="Parent’s Domicile No">
+          <input type="text" class="form-control" id="parentDomecileNo" name="parentDomecileNo" value="{{$user1[0]->parent_domicile_no}}" placeholder="Parent’s Domicile No">
           
         </div>
-        <script type="text/javascript">
-              document.getElementById("parentDomecileNo").onkeypress = function(e) {
-              var e = window.event || e
-              var keyunicode = e.charCode || e.keyCode
-              return (keyunicode >= 65 && keyunicode <= 90 || keyunicode >= 97 && keyunicode <= 122 || keyunicode>=48 && keyunicode<=57|| keyunicode == 8 || keyunicode == 32) ? true : false }
-        </script>
         <div class="form-group col-md-6 col-sm-12">
           <label for="dateOfParentDomecile">Date of Parent’s Domicile<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="date"  class="form-control" id="dateOfParentDomecile" onpaste="return false;" ondrop="return false;" name="dateOfParentDomecile" value="{{$user1[0]->parent_domicile_date}}" placeholder="Date of Parent’s Domicile">
+          <input type="date"  class="form-control" id="dateOfParentDomecile" name="dateOfParentDomecile" value="{{$user1[0]->parent_domicile_date}}" placeholder="Date of Parent’s Domicile">
         </div>
       </div>
       <div id="parentDomAppl" style="display: none;">
         <div class="form-group col-md-6 col-sm-12">
           <label for="parentDomecileApplicationNo">Parent’s Domicile Application No.<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="text" class="form-control" id="parentDomecileApplicationNo" name="parentDomecileApplicationNo" maxlength="30" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->parent_domicile_appl_no}}"placeholder="Parent’s Domicile Application No">
+          <input type="text" class="form-control" id="parentDomecileApplicationNo" name="parentDomecileApplicationNo" value="{{$user1[0]->parent_domicile_appl_no}}"placeholder="Parent’s Domicile Application No">
           
         </div>
         <div class="form-group col-md-6 col-sm-12">
           <label for="applicationDateOfParentDomecile">Application Date of Parent’s Domicile<label style="color: red; font-size: 25px;vertical-align: sub;">*</label></label>
-          <input type="date"  class="form-control" id="applicationDateOfParentDomecile" name="applicationDateOfParentDomecile" onpaste="return false;" ondrop="return false;" value="{{$user1[0]->parent_domicile_appl_date}}" placeholder="Application Date of Parent’s Domicile">
+          <input type="date"  class="form-control" id="applicationDateOfParentDomecile" name="applicationDateOfParentDomecile" value="{{$user1[0]->parent_domicile_appl_date}}" placeholder="Application Date of Parent’s Domicile">
         </div>
       </div>
       <div class="form-group col-md-6 col-sm-12">
@@ -425,32 +419,8 @@ function myFunction() {
         </a>
       </div>
       <div class="form-group col-md-6 col-sm-12">
-        <button type="submit" class="btn btn-view btn-primary" id="submitForm" name="submit" onclick="checkDates()" style="width: 100%" >Save And Continue</button> 
+        <button type="submit" class="btn btn-view btn-primary" id="submitForm" name="submit" style="width: 100%" >Save And Continue</button> 
       </div>
-      <script>
-        function checkDates() {                            
-            var today = (new Date()).toISOString().slice(0, 10);
-            if (document.getElementById('dom_yes').checked) {
-                var domDate = document.getElementById('dateOfParentDomecile').value;
-                if(domDate>=today){
-                    alert("Domicile date cannot be in future");
-                    document.getElementById('dateOfParentDomecile').value = '';
-                    document.getElementById('dateOfParentDomecile').focus;
-                    e.preventDefault();
-                }
-            }
-            if (document.getElementById('dom_no').checked) {
-                var domDate = document.getElementById('applicationDateOfParentDomecile').value;
-                if(domDate>=today){
-                    alert("Domicile application date cannot be in future");
-                    document.getElementById('applicationDateOfParentDomecile').value = '';
-                    document.getElementById('applicationDateOfParentDomecile').focus;
-                    e.preventDefault();
-                }
-            }
-            
-        }
-    </script>
     </form>
   </div>
 </div>
@@ -472,10 +442,8 @@ function myFunction() {
                     //alert('Helllo');
                     e.preventDefault();
                 }
-              
             });
         });
       </script>
-      
 <br><br><br>
 @endsection
